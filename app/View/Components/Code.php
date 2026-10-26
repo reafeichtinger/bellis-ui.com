@@ -31,24 +31,24 @@ class Code extends Component
     {
         return <<<'BLADE'
         <div {{ $attributes->merge(['class' => 'relative']) }}>
-            <c-button class="absolute top-0.5 right-0.5 btn-ghost btn-circle btn-sm" icon="clipboard" icon-class="h-4 w-4 text-base-content/50" tooltip="Copy"
+            <c-button class="absolute top-3 right-1 btn-ghost btn-circle btn-sm" icon="clipboard" icon-class="text-zinc-50/50" tooltip="Copy"
                 x-data="copyToClipboard" x-on:click="copy($el.nextElementSibling)" />
             <x-markdown :theme="$theme ?? 'aurora-x'">
                 @php echo "```$language" . PHP_EOL . $prepareSlot($slot) . PHP_EOL . '```'; @endphp
             </x-markdown>
         </div>
 
-        @pushonce('end')
+        @pushonce('bellis')
             @vite('resources/alpinejs/copy-to-clipboard.js')
             <style>
                 .shiki {
                     font-size: var(--text-sm);
                     line-height: var(--tw-leading, var(--text-sm--line-height));
                     overflow-x: auto;
-                    border-radius: var(--radius-box);
+                    border-radius: var(--radius-field);
                     padding: 0.5rem;
                     margin: 0.5rem 0;
-                    background-color: var(--color-base-300) !important;
+                    background-color: var(--color-zinc-900) !important;
                 }
             </style>
         @endpushonce

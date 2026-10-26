@@ -1,0 +1,23 @@
+{
+    // Enable format on save
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveMode": "file",
+    // Enable the extension we installed
+    "laravel-pint.enable": true,
+    // Define the new formatting extension as the default formatter for all .php files
+    "[php]": {
+        "editor.defaultFormatter": "open-southeners.laravel-pint"
+    },
+    // Define the new formatting extension as the default formatter for all .blade.php files
+    "[blade]": {
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+    },
+    "php.problems.exclude": {
+        "**/*": [
+            "PHP6602",
+            "PHP6606", // Static property accessed through child
+            "PHP7103", // Convert to callable syntax
+        ],
+        "vendor/": true,
+    }
+}
