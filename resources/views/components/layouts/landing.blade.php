@@ -31,7 +31,7 @@
         </c-slot:actions>
     </c-nav>
 
-    <c-main>
+    <c-main wire:transition.navigate>
         <c-slot:content class="px-0 lg:px-0">
             {{ $slot }}
         </c-slot:content>

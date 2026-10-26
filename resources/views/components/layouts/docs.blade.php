@@ -31,7 +31,7 @@
         </c-slot:actions>
     </c-nav>
 
-    <c-main with-nav>
+    <c-main with-nav wire:transition.navigate>
         <c-slot:sidebar drawer="main-drawer" class="bg-base-100">
             <c-menu activate-by-route active-bg-color="font-black text-primary" class="sm:mt-6">
                 {{-- Get started --}}

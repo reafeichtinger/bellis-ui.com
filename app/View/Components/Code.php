@@ -12,6 +12,8 @@ class Code extends Component
         public ?string $language = 'blade',
         public ?string $theme = 'aurora-x',
         public int $tabs = 12,
+        public bool $renderContent = false,
+        public ?string $renderClass = null,
     ) {}
 
     public function prepareSlot(string $slot): string
@@ -38,8 +40,17 @@ class Code extends Component
             </x-markdown>
         </div>
 
+        @if ($renderContent)
+                <c-mockup-browser @class([$renderClass])>
+                    <?php echo Blade::render($prepareSlot($slot)); ?>
+                </c-mockup-browser>
+        @endif
+
+        @assets
+            <script src="{{ asset('alpinejs/copy-to-clipboard.js') }}" data-navigate-once></script>
+        @endassets
+
         @pushonce('bellis')
-            @vite('resources/alpinejs/copy-to-clipboard.js')
             <style>
                 .shiki {
                     font-size: var(--text-sm);
