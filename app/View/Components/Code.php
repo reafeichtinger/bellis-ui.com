@@ -33,8 +33,8 @@ class Code extends Component
     {
         return <<<'BLADE'
         <div {{ $attributes->merge(['class' => 'relative']) }}>
-            <c-button class="absolute top-3 right-1 btn-ghost btn-circle btn-sm" icon="clipboard" icon-class="text-zinc-50/50" tooltip="Copy"
-                x-data="copyToClipboard" x-on:click="copy($el.nextElementSibling)" />
+            <c-button class="absolute top-3 right-1 btn-ghost btn-circle hover:bg-neutral/25 btn-sm" icon="clipboard" icon-class="text-zinc-50/50" tooltip="Copy"
+                x-data="code($el)" x-on:click="copy($el.nextElementSibling)" />
             <x-markdown :theme="$theme ?? 'aurora-x'">
                 @php echo "```$language" . PHP_EOL . $prepareSlot($slot) . PHP_EOL . '```'; @endphp
             </x-markdown>
@@ -45,10 +45,6 @@ class Code extends Component
                     <?php echo Blade::render($prepareSlot($slot)); ?>
                 </c-mockup-browser>
         @endif
-
-        @assets
-            <script src="{{ asset('alpinejs/copy-to-clipboard.js') }}" data-navigate-once></script>
-        @endassets
 
         @pushonce('bellis')
             <style>
