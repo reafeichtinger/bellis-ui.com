@@ -27,7 +27,7 @@
             <c-divider vertical />
 
             {{-- Theme toggle --}}
-            <c-theme-toggle class="btn  btn-circle btn-ghost" />
+            <c-theme-toggle class="btn btn-circle btn-ghost" lightTheme="bellis-light" darkTheme="bellis-dark" />
         </c-slot:actions>
     </c-nav>
 

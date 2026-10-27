@@ -8,12 +8,14 @@
 @source "../../vendor/reafeichtinger/bellis-ui/src/View/Components/**/*.php";
 
 @plugin "daisyui" {
-    themes: light --default, dark --prefersdark;
+    themes: false;
 }
 
 @plugin "daisyui/theme" {
-    name: "light";
+    name: "bellis-light";
     default: true;
+    prefersdark: false;
+    color-scheme: light;
     --font-sans: "Inter", sans-serif;
     --font-mono: "IBM Plex Mono", monospace;
 
@@ -56,8 +58,10 @@
 }
 
 @plugin "daisyui/theme" {
-    name: "dark";
-    default: true;
+    name: "bellis-dark";
+    default: false;
+    prefersdark: false;
+    color-scheme: dark;
     --font-sans: "Inter", sans-serif;
     --font-mono: "IBM Plex Mono", monospace;
 
@@ -98,3 +102,5 @@
     --depth: 0;
     --noise: 0;
 }
+
+@custom-variant dark (&:where([data-theme=bellis-dark] *));

@@ -1,5 +1,11 @@
 <div class="flex flex-col space-y-6">
-    <c-header title="Installation" icon="hash" icon-class="text-secondary" level="h1" with-anchor />
+    <c-header title="Installation" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
+        <c-slot:actions>
+            <c-button icon="github"
+                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/install"
+                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
+        </c-slot:actions>
+    </c-header>
 
     <c-alert icon="triangle-alert" class="alert-warning">
         It is recommended to install this only on fresh or small projects. Compatability with starter kits or other

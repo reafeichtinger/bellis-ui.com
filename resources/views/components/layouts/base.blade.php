@@ -80,12 +80,12 @@
     <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin /> --}}
 
     {{-- Umami Analytics --}}
-    {{-- @if(app()->isProduction())
+    {{-- @if (app()->isProduction())
         <script defer src="https://analytics.robsontenorio.com/script.js" data-website-id="9dac1324-beb1-49e3-8a3f-8528fdc91df3"></script>
     @endif --}}
 
     {{-- Google tag (gtag.js) --}}
-    {{-- @if(app()->isProduction())
+    {{-- @if (app()->isProduction())
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-NDC4ZLZ6D2"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -101,11 +101,11 @@
     @endif --}}
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    
+
     @stack('bellis-head')
 </head>
 
-<body class="min-h-screen font-sans antialiased transition-colors">
+<body class="min-h-screen font-sans antialiased transition-colors bg-base-100">
     {{ $slot }}
 
     {{-- Toast --}}
@@ -116,4 +116,5 @@
 
     @stack('bellis')
 </body>
+
 </html>
