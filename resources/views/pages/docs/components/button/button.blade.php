@@ -1,4 +1,4 @@
-<div class="flex flex-col space-y-6">
+<div class="doc">
     <c-header title="Button" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
         <c-slot:actions>
             <c-button icon="github"
@@ -80,11 +80,11 @@
         @verbatim
             <c-form wire:submit="testSpinner2">
                 <c-input placeholder="Name" />
+                
                 <c-slot:actions>
                     <c-button label="Self target" icon="circle-dashed-check" wire:click="testSpinner1" spinner />
                     <c-button label="No target" />
-                    <c-button label="Custom target" type="submit" class="btn-primary" icon-right="check"
-                        spinner="testSpinner2" />
+                    <c-button label="Custom target" type="submit" class="btn-primary" icon-right="check" spinner="testSpinner2" />
                 </c-slot:actions>
             </c-form>
         @endverbatim
@@ -107,7 +107,7 @@
 
     {{-- Tooltips --}}
     <c-header title="Tooltips" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="py-10">
+    <x-code language="blade" render-content>
         @verbatim
             <c-button label="Top" tooltip="Top" />
             <c-button label="Right" tooltip-right="Right" />

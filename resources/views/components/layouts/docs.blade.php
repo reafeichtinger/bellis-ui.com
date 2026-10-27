@@ -35,7 +35,7 @@
         <c-slot:sidebar drawer="main-drawer" class="bg-base-100">
             <c-menu activate-by-route active-bg-color="font-black text-primary" class="sm:mt-6">
                 {{-- Get started --}}
-                <c-menu-sub title="Get started" icon="sparkles" class="font-bold" open>
+                <c-menu-sub title="Get started" icon="sparkles" class="font-bold">
                     <c-menu-item title="Installation" link="/docs/install" />
                     <c-menu-item title="Themes" link="/docs/themes" />
                     <c-menu-item title="Config" link="/docs/config" />
