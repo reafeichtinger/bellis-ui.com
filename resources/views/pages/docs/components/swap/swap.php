@@ -7,5 +7,5 @@ new
 #[Layout('layouts.docs')]
 class extends Component
 {
-    //
+    public bool $swap = false;
 };

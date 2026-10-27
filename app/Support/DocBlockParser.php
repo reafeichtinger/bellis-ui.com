@@ -68,6 +68,28 @@ class DocBlockParser
             }
         }
 
+        /**
+         * Pattern explanation:
+         *
+         * @slot\s+      -> Matches @slot followed by whitespace
+         * ([^\s]+)         -> Capture Group 1: The Type (e.g., ?string)
+         * \s+\$?           -> Space followed by an optional $
+         * ([^\s]+)         -> Capture Group 2: The Name (e.g., id)
+         * \s+              -> Space
+         * (.*)             -> Capture Group 3: The Description
+         */
+        $pattern = '/@slot\s+([^\s]+)\s+\$?([^\s]+)\s+(.*)/';
+
+        if (preg_match_all($pattern, $cleanDoc, $matches, PREG_SET_ORDER)) {
+            foreach ($matches as $match) {
+                $properties[] = [
+                    'name' => trim($match[2]),
+                    'type' => 'slot',
+                    'description' => trim($match[3]),
+                ];
+            }
+        }
+
         return [
             'description' => $description,
             'properties' => $properties,
