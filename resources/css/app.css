@@ -113,6 +113,10 @@
     overflow: visible !important;
 }
 
+p code {
+    @apply bg-base-200 mx-px -my-px px-1.5 py-0.5 rounded-selector text-accent
+}
+
 h1 {
     @apply mb-3 text-2xl sm:text-3xl
 }

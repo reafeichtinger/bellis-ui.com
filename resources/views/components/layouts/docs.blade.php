@@ -131,9 +131,10 @@
 
                     <div class="text-center text-sm text-base-content/70 pb-24">
                         Made with
-                        <c-icon name="heart" class="text-accent w-4 h-4" />
+                        <c-icon name="heart-handshake" class="text-accent w-4 h-4" />
                         by Rea Feichtinger and
-                        <a href="https://github.com/reafeichtinger/bellis-ui" class="underline">contributors</a>.
+                        <a href="https://github.com/reafeichtinger/bellis-ui"
+                            class="link hover:text-base-content">contributors</a>.
                     </div>
                 </c-slot:footer>
             </c-slot:content>

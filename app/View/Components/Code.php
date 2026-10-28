@@ -24,7 +24,7 @@ class Code extends Component
         $baseTabs = str_repeat(' ', $this->tabs);
 
         foreach (explode("\n", trim($slot)) as $line) {
-            $processedLines[] = str()->of($line)->replace($baseTabs, '')->rtrim();
+            $processedLines[] = str()->of($line)->replaceFirst($baseTabs, '')->rtrim();
         }
 
         return implode("\n", $processedLines);
