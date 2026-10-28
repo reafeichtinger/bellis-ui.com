@@ -26,7 +26,7 @@ class ComponentApi extends Component
         <div {{ $attributes }}>
             <p>{{ $data['description'] ?? $className }}</p>
 
-            <c-table :headers="$headers" :rows="$data['properties'] ?? []" class="border-(length:--border) border-base-content/10" container-class="mt-6 max-h-96! overflow-y-auto" >
+            <c-table :headers="$headers" :rows="$data['properties'] ?? []" class="border-(length:--border) border-base-content/15" container-class="mt-6 max-h-96! overflow-y-auto" >
                 @scope('cell_name', $property)
                     {{ str()->of($property['name'] ?? '')->kebab() }}
                 @endscope

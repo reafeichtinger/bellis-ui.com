@@ -2,8 +2,9 @@
     <c-nav sticky>
         <c-slot:brand>
             <a href="/" wire:navigate class="flex flex-row items-center">
-                <c-icon name="flower" class="h-8 w-8 text-primary" />
-                <span class="ms-2 font-bold text-2xl underline decoration-primary">{{ config('app.name') }}</span>
+                <img src="/svg/bellisui.svg" class="object-contain w-11 h-11 -my-1" />
+                <span
+                    class="ms-2 font-semibold text-2xl text-stone-800 dark:text-stone-300">{{ config('app.name') }}</span>
             </a>
         </c-slot:brand>
         <c-slot:actions class="flex gap-1! lg:gap-4!">

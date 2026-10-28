@@ -34,7 +34,7 @@ class Code extends Component
     {
         return <<<'BLADE'
         <div {{ $attributes->merge(['class' => 'relative']) }}>
-            <c-button class="absolute top-3 right-1 btn-ghost bg-zinc-900 hover:border-neutral btn-square" icon="clipboard" icon-class="text-zinc-50/50" tooltip="Copy"
+            <c-button class="absolute top-2 right-0 btn-ghost bg-zinc-900 hover:border-neutral btn-square" icon="clipboard" icon-class="text-zinc-50/50" tooltip="Copy"
                 x-data="code($el)" x-on:click="copy($el.nextElementSibling)" />
             <x-markdown :theme="$theme ?? 'aurora-x'">
                 @php echo "```$language" . PHP_EOL . $prepareSlot($slot) . PHP_EOL . '```'; @endphp

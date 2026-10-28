@@ -2,8 +2,8 @@
     <c-nav sticky>
         <c-slot:brand>
             <a href="/" wire:navigate class="flex flex-row items-center">
-                <c-icon name="flower" class="h-8 w-8 text-primary" />
-                <span class="ms-2 font-bold text-2xl underline decoration-primary">{{ config('app.name') }}</span>
+                <img src="/svg/bellisui.svg" class="object-contain w-11 h-11 -my-1" />
+                <span class="ms-2 font-bold text-2xl">{{ config('app.name') }}</span>
             </a>
         </c-slot:brand>
         <c-slot:actions class="flex gap-1! lg:gap-4!">
@@ -27,7 +27,7 @@
             <c-divider vertical />
 
             {{-- Theme toggle --}}
-            <c-theme-toggle class="btn  btn-circle btn-ghost" />
+            <c-theme-toggle class="btn btn-circle btn-ghost" lightTheme="bellis-light" darkTheme="bellis-dark" />
         </c-slot:actions>
     </c-nav>
 
@@ -41,9 +41,10 @@
 
             <div class="text-center text-sm text-base-content/70 pb-24">
                 Made with
-                <c-icon name="heart" class="text-accent w-4 h-4" />
+                <c-icon name="heart-handshake" class="text-accent w-4 h-4 mb-1" />
                 by Rea Feichtinger and
-                <a href="https://github.com/reafeichtinger/bellis-ui" class="underline">contributors</a>.
+                <a href="https://github.com/reafeichtinger/bellis-ui"
+                    class="link hover:text-base-content">contributors</a>.
             </div>
         </c-slot:footer>
     </c-main>

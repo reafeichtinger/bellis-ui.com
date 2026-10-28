@@ -13,7 +13,7 @@
     </c-alert>
 
     <p>
-        In order to start the installation process of bellis-ui you need a compatible project. Make sure your project
+        In order to start the installation process of bellisUI you need a compatible project. Make sure your project
         matches these requirements:
     </p>
 
@@ -42,7 +42,7 @@
     </div>
 
     <p>
-        Once you made sure your proejct is working, you can run the following command to install the bellis-ui composer
+        Once you made sure your proejct is working, you can run the following command to install the bellisUI composer
         package.
     </p>
 

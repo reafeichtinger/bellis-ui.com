@@ -22,10 +22,12 @@
             <c-avatar image="https://testingbot.com/free-online-tools/random-avatar/300" title="Rea Feichtinger" />
 
             {{-- Subtitle --}}
-            <c-avatar image="https://testingbot.com/free-online-tools/random-avatar/300" title="Rea Feichtinger" subtitle="Creator of bellis-ui" class="w-10!" />
+            <c-avatar image="https://testingbot.com/free-online-tools/random-avatar/300" title="Rea Feichtinger"
+                subtitle="Creator of bellisUI" class="w-10!" />
 
             {{-- Placeholder --}}
-            <c-avatar placeholder="RF" title="Rea Feichtinger" subtitle="@reafeichtinger" class="w-10! bg-accent! text-accent-content!" />
+            <c-avatar placeholder="RF" title="Rea Feichtinger" subtitle="@reafeichtinger"
+                class="w-10! bg-accent! text-accent-content!" />
         @endverbatim
     </x-code>
 

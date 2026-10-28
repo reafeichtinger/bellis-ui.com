@@ -16,21 +16,21 @@
     default: true;
     prefersdark: false;
     color-scheme: light;
-    --font-sans: "Inter", sans-serif;
+    --font-sans: sans-serif, Vazirmatn, "Noto Sans", "Noto Sans JP", 'Outfit Variable';
     --font-mono: "IBM Plex Mono", monospace;
 
     --color-base-100: oklch(98.5% 0.001 106.423);
-    --color-base-200: oklch(97% 0.001 106.424);
-    --color-base-300: oklch(92.3% 0.003 48.717);
+    --color-base-200: oklch(92% 0.004 286.32);
+    --color-base-300: oklch(92.2% 0.005 34.3);
     --color-base-content: oklch(14.7% 0.004 49.25);
     --color-primary: oklch(66.6% 0.179 58.318);
     --color-primary-content: oklch(98.7% 0.022 95.277);
     --color-secondary: oklch(64.6% 0.222 41.116);
     --color-secondary-content: oklch(98% 0.016 73.684);
-    --color-accent: oklch(58.8% 0.158 241.966);
-    --color-accent-content: oklch(97.7% 0.013 236.62);
-    --color-neutral: oklch(70.9% 0.01 56.259);
-    --color-neutral-content: oklch(14.7% 0.004 49.25);
+    --color-accent: oklch(0.587 0.233 322.15);
+    --color-accent-content: oklch(97.7% 0.017 320.058);
+    --color-neutral: oklch(86.5% 0.012 325.68);
+    --color-neutral-content: oklch(14.5% 0.008 326);
     --color-info: oklch(54.6% 0.245 262.881);
     --color-info-content: oklch(97% 0.014 254.604);
     --color-success: oklch(62.7% 0.194 149.214);
@@ -62,7 +62,7 @@
     default: false;
     prefersdark: false;
     color-scheme: dark;
-    --font-sans: "Inter", sans-serif;
+    --font-sans: sans-serif, Vazirmatn, "Noto Sans", "Noto Sans JP", 'Outfit Variable';
     --font-mono: "IBM Plex Mono", monospace;
 
     --color-base-100: oklch(14.7% 0.004 49.25);
@@ -71,10 +71,10 @@
     --color-base-content: oklch(98.5% 0.001 106.423);
     --color-primary: oklch(76.9% 0.188 70.08);
     --color-primary-content: oklch(27.9% 0.077 45.635);
-    --color-secondary: oklch(75% 0.183 55.934);
-    --color-secondary-content: oklch(26.6% 0.079 36.259);
-    --color-accent: oklch(70.7% 0.165 254.624);
-    --color-accent-content: oklch(28.2% 0.091 267.935);
+    --color-secondary: oklch(0.8613 0.0945 64.99);
+    --color-secondary-content: oklch(27.9% 0.077 45.635);
+    --color-accent: oklch(71.4% 0.203 305.504);
+    --color-accent-content: oklch(29.1% 0.149 302.717);
     --color-neutral: oklch(44.4% 0.011 73.639);
     --color-neutral-content: oklch(98.5% 0.001 106.423);
     --color-info: oklch(62.3% 0.214 259.815);

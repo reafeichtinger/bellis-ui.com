@@ -53,7 +53,7 @@
         @verbatim
             <c-button label="Icon left" icon="user" />
             <c-button label="Icon right" icon-right="user" />
-            <c-button label="Icons" icon="user" icon-right="user" icon-class="text-secondary" />
+            <c-button label="Icons" icon="user" icon-right="user" icon-class="text-accent" />
             <c-button icon="user" tooltip="Icon only" />
 
             <c-divider class="my-3" label="Shapes" />

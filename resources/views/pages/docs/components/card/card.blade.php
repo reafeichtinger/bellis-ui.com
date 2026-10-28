@@ -12,7 +12,7 @@
     {{-- Content --}}
     <c-header title="Content" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
     <x-code language="blade" render-content
-        render-class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-base-300 rounded-b-box">
+        render-class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-base-300 rounded-b-field">
         @verbatim
             <c-card title="Your title" subtitle="This is the subtitle" shadow separator>
                 I have title, subtitle, shadow and separator.
@@ -40,7 +40,7 @@
     {{-- Progress indicator --}}
     <c-header title="Progress indicator" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
     <x-code language="blade" render-content
-        render-class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-base-300 rounded-b-box">
+        render-class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-base-300 rounded-b-field">
         @verbatim
             {{-- NOTE: `separator` + `progress-indicator` --}}
             <c-card title="Some card" subtitle="Always triggers" separator progress-indicator>
