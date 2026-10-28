@@ -2,7 +2,7 @@
     <c-header title="Dropdown" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
         <c-slot:actions>
             <c-button icon="github"
-                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/dropdown"
+                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/dropdown/dropdown.blade.php"
                 class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
         </c-slot:actions>
     </c-header>

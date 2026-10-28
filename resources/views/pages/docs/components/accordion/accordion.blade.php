@@ -2,7 +2,7 @@
     <c-header title="Accordion" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
         <c-slot:actions>
             <c-button icon="github"
-                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/accordion"
+                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/accordion/accordion.blade.php"
                 class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
         </c-slot:actions>
     </c-header>
@@ -31,8 +31,8 @@
                     <c-slot:heading>Group 3</c-slot:heading>
                     <c-slot:content>Hello 3</c-slot:content>
                 </c-collapse>
-                </x-accordion>
-            @endverbatim
+            </c-accordion>
+        @endverbatim
     </x-code>
 
     {{-- No join --}}
@@ -52,7 +52,7 @@
                     <c-slot:heading>Group 3</c-slot:heading>
                     <c-slot:content>Hello 3</c-slot:content>
                 </c-collapse>
-                </x-accordion>
-            @endverbatim
+            </c-accordion>
+        @endverbatim
     </x-code>
 </div>

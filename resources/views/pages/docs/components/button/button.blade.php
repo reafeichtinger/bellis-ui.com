@@ -2,13 +2,14 @@
     <c-header title="Button" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
         <c-slot:actions>
             <c-button icon="github"
-                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/button"
+                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/button/button.blade.php"
                 class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
         </c-slot:actions>
     </c-header>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Button::class" />
 
+    {{-- Content --}}
     <c-header title="Content" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
     <x-code language="blade" render-content>
         @verbatim
@@ -80,11 +81,12 @@
         @verbatim
             <c-form wire:submit="testSpinner2">
                 <c-input placeholder="Name" />
-                
+
                 <c-slot:actions>
                     <c-button label="Self target" icon="circle-dashed-check" wire:click="testSpinner1" spinner />
                     <c-button label="No target" />
-                    <c-button label="Custom target" type="submit" class="btn-primary" icon-right="check" spinner="testSpinner2" />
+                    <c-button label="Custom target" type="submit" class="btn-primary" icon-right="check"
+                        spinner="testSpinner2" />
                 </c-slot:actions>
             </c-form>
         @endverbatim
