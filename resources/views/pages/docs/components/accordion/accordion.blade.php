@@ -18,7 +18,7 @@
     <c-header title="Default" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
     <x-code language="blade" render-content>
         @verbatim
-            <c-accordion wire:model="default">
+            <c-accordion wire:model.live="default">
                 <c-collapse name="default1">
                     <c-slot:heading>Group 1</c-slot:heading>
                     <c-slot:content>Hello 1</c-slot:content>
@@ -34,6 +34,10 @@
             </c-accordion>
         @endverbatim
     </x-code>
+
+    <p>
+        Current value: <span class="text-secondary">{{ $this->default ?? 'null' }}</span>
+    </p>
 
     {{-- No join --}}
     <c-header title="No join" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
