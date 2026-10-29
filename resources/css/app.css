@@ -2,7 +2,7 @@
 
 @source "../**/*.blade.php";
 @source "../**/*.js";
-@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.php";
 @source "../../storage/framework/views/*.php";
 
 @source "../../vendor/reafeichtinger/bellis-ui/src/View/Components/**/*.php";
@@ -17,7 +17,7 @@
     prefersdark: false;
     color-scheme: light;
     --font-sans: sans-serif, Vazirmatn, "Noto Sans", "Noto Sans JP", 'Outfit Variable';
-    --font-mono: "IBM Plex Mono", monospace;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Vazirmatn, Courier New, monospace;
 
     --color-base-100: oklch(98.5% 0.001 106.423);
     --color-base-200: oklch(92% 0.004 286.32);
@@ -63,7 +63,7 @@
     prefersdark: false;
     color-scheme: dark;
     --font-sans: sans-serif, Vazirmatn, "Noto Sans", "Noto Sans JP", 'Outfit Variable';
-    --font-mono: "IBM Plex Mono", monospace;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Vazirmatn, Courier New, monospace;
 
     --color-base-100: oklch(14.7% 0.004 49.25);
     --color-base-200: oklch(21.6% 0.006 56.043);
@@ -113,8 +113,9 @@
     overflow: visible !important;
 }
 
-p code {
-    @apply bg-base-200 mx-px -my-px px-1.5 py-0.5 rounded-selector text-accent
+p code,
+li code {
+    @apply bg-base-200 mx-px -my-px px-1.5 py-0.5 rounded-selector text-accent font-mono font-medium
 }
 
 h1 {
