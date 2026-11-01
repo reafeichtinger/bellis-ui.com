@@ -33,33 +33,34 @@ class Code extends Component
     public function render(): View|Closure|string
     {
         return <<<'BLADE'
-        <div {{ $attributes->merge(['class' => 'relative']) }}>
-            <c-button class="absolute top-2 right-0 btn-ghost bg-zinc-900 hover:border-neutral btn-square" icon="clipboard" icon-class="text-zinc-50/50" tooltip="Copy"
-                x-data="code($el)" x-on:click="copy($el.nextElementSibling)" />
-            <x-markdown :theme="$theme ?? 'aurora-x'">
-                @php echo "```$language" . PHP_EOL . $prepareSlot($slot) . PHP_EOL . '```'; @endphp
-            </x-markdown>
-        </div>
-
-        @if ($renderContent)
+            @if ($renderContent)
                 <c-mockup-browser @class([$renderClass])>
-                    <?php echo Blade::render($prepareSlot($slot)); ?>
+                    {!! Blade::render($prepareSlot($slot)) !!}
                 </c-mockup-browser>
-        @endif
+            @endif
 
-        @pushonce('bellis')
-            <style>
-                .shiki {
-                    font-size: var(--text-sm);
-                    line-height: var(--tw-leading, var(--text-sm--line-height));
-                    overflow-x: auto;
-                    border-radius: var(--radius-field);
-                    padding: 0.5rem;
-                    margin: 0.5rem 0;
-                    background-color: var(--color-zinc-900) !important;
-                }
-            </style>
-        @endpushonce
+            <div {{ $attributes->merge(['class' => 'relative']) }}>
+                <c-button class="absolute top-2 right-0 btn-ghost bg-zinc-900 hover:border-neutral btn-square" 
+                    icon="clipboard" icon-class="text-zinc-50/50" tooltip="Copy"
+                    x-data="code($el)" x-on:click="copy($el.nextElementSibling)" />
+                <x-markdown :theme="$theme ?? 'aurora-x'">
+                    @php echo "```$language" . PHP_EOL . $prepareSlot($slot) . PHP_EOL . '```'; @endphp
+                </x-markdown>
+            </div>
+
+            @pushonce('bellis')
+                <style>
+                    .shiki {
+                        font-size: var(--text-sm);
+                        line-height: var(--tw-leading, var(--text-sm--line-height));
+                        overflow-x: auto;
+                        border-radius: var(--radius-field);
+                        padding: 0.5rem;
+                        margin: 0.5rem 0;
+                        background-color: var(--color-zinc-900) !important;
+                    }
+                </style>
+            @endpushonce
         BLADE;
     }
 }

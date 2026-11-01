@@ -35,7 +35,7 @@
     </x-code>
 
     {{-- Appearance --}}
-    <c-header title="General" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
+    <c-header title="Appearance" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
     <x-code language="blade" render-content render-class="grid gap-4">
         @verbatim
             <c-steps wire:model="step" step-class="step-primary">
