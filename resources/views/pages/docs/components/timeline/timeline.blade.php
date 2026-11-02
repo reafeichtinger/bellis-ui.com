@@ -45,11 +45,11 @@
                     title="Order placed" 
                     border-done-class="border-s-success" 
                     bullet-done-class="bg-success"
-                    first done />
+                    done />
 
                 <c-timeline-item 
                     title="Delivered" 
-                    border-class="border-s-error opacity-60" 
+                    border-class="border-s-error" 
                     bullet-class="bg-error" />
             </div>
         @endverbatim

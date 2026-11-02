@@ -1,6 +1,12 @@
 <div class="doc">
     <c-header title="Button" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
         <c-slot:actions>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/button/" class="btn-ghost btn-circle"
+                tooltip="View daisyUI docs" external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/button/button.blade.php"
                 class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
