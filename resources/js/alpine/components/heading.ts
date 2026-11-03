@@ -1,6 +1,6 @@
 export default () => ({
     async link($el: HTMLElement) {
-        const href = $el.closest('a')?.href as string | null;
+        const href = $el.querySelector('a')?.href as string | null;
 
         if (!href) {
             console.warn('Heading: Link not found.');
@@ -22,13 +22,17 @@ export default () => ({
             });
 
             history.pushState(null, '', href);
+            console.log($el);
+            const button = $el.querySelector('button');
 
-            const originalTip = $el.dataset.tip;
-            $el.dataset.tip = 'Copied!';
+            if (button) {
+                const originalTip = button?.dataset.tip;
+                button.dataset.tip = 'Copied!';
 
-            setTimeout(() => {
-                $el.dataset.tip = originalTip || 'Copy';
-            }, 2000);
+                setTimeout(() => {
+                    button.dataset.tip = originalTip || 'Copy';
+                }, 2000);
+            }
         } catch (err) {
             console.error('Failed to copy: ', err);
         }

@@ -16,12 +16,30 @@ class Heading extends Component
 
     public function render(): View|Closure|string
     {
-        return <<<'BLADE'
-            <c-h2 :title="$title" x-data="heading" anchor>
+        if ($this->level === 'h1') {
+            return <<<'BLADE'
+            <c-h1 :title="$title" x-data="heading" x-on:click.prevent="link($el)" class="scroll-mt-18" anchor>
                 <c-slot name="icon">
                     <c-button icon="hash" icon-class="h-4 w-4"
-                        x-on:click.prevent="link($el)" tooltip-left="Copy link"
-                        class="btn-square btn-sm btn-ghost text-secondary scroll-mt-18" />
+                         tooltip-left="Copy link"
+                        class="btn-square btn-sm btn-ghost text-secondary" />
+                </c-slot>
+
+                @if ($end)
+                    <c-slot name="end">
+                        {{ $end }}
+                    </c-slot>
+                @endif
+            </c-h1>
+        BLADE;
+        }
+
+        return <<<'BLADE'
+            <c-h2 :title="$title" x-data="heading" x-on:click.prevent="link($el)" class="scroll-mt-18" anchor>
+                <c-slot name="icon">
+                    <c-button icon="hash" icon-class="h-4 w-4"
+                         tooltip-left="Copy link"
+                        class="btn-square btn-sm btn-ghost text-secondary" />
                 </c-slot>
 
                 @if ($end)
