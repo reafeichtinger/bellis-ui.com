@@ -12,6 +12,12 @@
     <c-header title="Step" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
     <x-component-api :class-name="Bellis\View\Components\Bellis\Step::class" />
 
+    <c-alert icon="badge-info" class="alert-info">
+        For vertical steps check out the
+        <a href="/docs/components/timeline" wire:navigate class="link">Timeline</a>
+        component.
+    </c-alert>
+
     {{-- General --}}
     <c-header title="General" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
     <x-code language="blade" render-content>

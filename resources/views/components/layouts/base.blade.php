@@ -115,6 +115,7 @@
     <c-spotlight search-text="Type 'a' ..." />
 
     @stack('bellis')
+    @livewireScriptConfig
 </body>
 
 </html>

@@ -1,26 +1,16 @@
 <div class="doc">
-    <c-h1 title="Header" icon="hash" icon-class="text-secondary" anchor class="scroll-mt-18">
-        <x-slot:icon>
-            <c-button icon="hash" x-on:click="navigator.clipboard.writeText($el.closest('a').href)"
-                class="btn-square btn-sm btn-ghost text-secondary" />
-        </x-slot:icon>
-        <c-slot:actions>
+    <x-heading title="Header" level="h1">
+        <c-slot:end>
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/header/header.blade.php"
                 class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-h1>
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Header::class" />
 
     {{-- Tags --}}
-    <c-h2 title="Tags" anchor class="scroll-mt-18">
-        <x-slot:icon>
-            <c-button icon="hash" icon-class="h-4 w-4"
-                x-on:click="navigator.clipboard.writeText($el.closest('a').href)"
-                class="btn-square btn-sm btn-ghost text-secondary" />
-        </x-slot:icon>
-    </c-h2>
+    <x-heading title="Tags" />
     <x-code language="blade" render-content render-class="p-8">
         @verbatim
             <c-h1 title="Using h1 tag" />
@@ -35,13 +25,7 @@
     </x-code>
 
     {{-- Subtitle --}}
-    <c-h2 title="Subtitle" anchor class="scroll-mt-18">
-        <x-slot:icon>
-            <c-button icon="hash" icon-class="h-4 w-4"
-                x-on:click="navigator.clipboard.writeText($el.closest('a').href)"
-                class="btn-square btn-sm btn-ghost text-secondary" />
-        </x-slot:icon>
-    </c-h2>
+    <x-heading title="Subtitle" />
     <x-code language="blade" render-content render-class="p-8">
         @verbatim
             <c-h1 title="With subtitle" subtitle="This is the subtitle." />
@@ -55,13 +39,7 @@
     </x-code>
 
     {{-- Icon --}}
-    <c-h2 title="Icon" anchor class="scroll-mt-18">
-        <x-slot:icon>
-            <c-button icon="hash" icon-class="h-4 w-4"
-                x-on:click="navigator.clipboard.writeText($el.closest('a').href)"
-                class="btn-square btn-sm btn-ghost text-secondary" />
-        </x-slot:icon>
-    </c-h2>
+    <x-heading title="Icon" />
     <x-code language="blade" render-content render-class="p-8">
         @verbatim
             <c-h1 title="With icon" icon="zap" icon-class="h-7 w-7" />
@@ -76,13 +54,7 @@
     </x-code>
 
     {{-- Divider & Progress --}}
-    <c-h2 title="Divider & Progress" anchor class="scroll-mt-18">
-        <x-slot:icon>
-            <c-button icon="hash" icon-class="h-4 w-4"
-                x-on:click="navigator.clipboard.writeText($el.closest('a').href)"
-                class="btn-square btn-sm btn-ghost text-secondary" />
-        </x-slot:icon>
-    </c-h2>
+    <x-heading title="Divider & Progress" />
     <x-code language="blade" render-content render-class="p-8 flex flex-col gap-4">
         @verbatim
             <c-h1 title="Divider only" divider />
@@ -102,13 +74,7 @@
     </x-code>
 
     {{-- Slots --}}
-    <c-h2 title="Slots" anchor class="scroll-mt-18">
-        <x-slot:icon>
-            <c-button icon="hash" icon-class="h-4 w-4"
-                x-on:click="navigator.clipboard.writeText($el.closest('a').href)"
-                class="btn-square btn-sm btn-ghost text-secondary" />
-        </x-slot:icon>
-    </c-h2>
+    <x-heading title="Slots" />
     <x-code language="blade" render-content render-class="p-8">
         @verbatim
             <c-header subtitle="This is responsive" divider>
