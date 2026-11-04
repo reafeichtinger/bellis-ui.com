@@ -18,11 +18,11 @@ class Heading extends Component
     {
         if ($this->level === 'h1') {
             return <<<'BLADE'
-            <c-h1 :title="$title" x-data="heading" x-on:click.prevent="link($el)" class="scroll-mt-18" anchor>
+            <c-h1 :title="$title" x-data="heading" x-on:click.prevent="link($el)" class="scroll-mt-20 group" anchor>
                 <c-slot name="icon">
                     <c-button icon="hash" icon-class="h-4 w-4"
-                         tooltip-left="Copy link"
-                        class="btn-square btn-sm btn-ghost text-secondary" />
+                        tooltip-left="Copy link"
+                        class="btn-square btn-sm btn-ghost text-secondary transition-opacity duration-300 opacity-0 group-hover:opacity-100 -ms-10" />
                 </c-slot>
 
                 @if ($end)
@@ -35,11 +35,11 @@ class Heading extends Component
         }
 
         return <<<'BLADE'
-            <c-h2 :title="$title" x-data="heading" x-on:click.prevent="link($el)" class="scroll-mt-18" anchor>
+            <c-h2 :title="$title" x-data="heading" x-on:click.prevent="link($el)" class="scroll-mt-20 group" anchor>
                 <c-slot name="icon">
                     <c-button icon="hash" icon-class="h-4 w-4"
-                         tooltip-left="Copy link"
-                        class="btn-square btn-sm btn-ghost text-secondary" />
+                        tooltip-left="Copy link"
+                        class="btn-square btn-sm btn-ghost text-secondary transition-opacity duration-300 opacity-0 group-hover:opacity-100 -ms-9" />
                 </c-slot>
 
                 @if ($end)

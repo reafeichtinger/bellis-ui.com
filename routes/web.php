@@ -7,82 +7,86 @@ Route::livewire('/', 'pages::landing');
 
 #region /docs
 Route::group(['prefix' => 'docs'], function () {
+    Route::get('/', fn () => response()->redirectTo('/docs/install'));
+
     // Get started
     Route::livewire('/install', 'pages::docs.install');
     Route::livewire('/themes', 'pages::docs.themes');
     Route::livewire('/config', 'pages::docs.config');
     Route::livewire('/contributing', 'pages::docs.contributing');
-
-    #region /components
-    Route::group(['prefix' => 'components'], function () {
-        // Actions
-        Route::livewire('/button', 'pages::docs.components.button');
-        Route::livewire('/dropdown', 'pages::docs.components.dropdown');
-        Route::livewire('/modal', 'pages::docs.components.modal');
-        Route::livewire('/swap', 'pages::docs.components.swap');
-        Route::livewire('/theme-toggle', 'pages::docs.components.theme-toggle');
-
-        // Data display
-        Route::livewire('/accordion', 'pages::docs.components.accordion');
-        Route::livewire('/avatar', 'pages::docs.components.avatar');
-        Route::livewire('/badge', 'pages::docs.components.badge');
-        Route::livewire('/card', 'pages::docs.components.card');
-        Route::livewire('/carousel', 'pages::docs.components.carousel');
-        Route::livewire('/collapse', 'pages::docs.components.collapse');
-        Route::livewire('/icon', 'pages::docs.components.icon');
-        Route::livewire('/kbd', 'pages::docs.components.kbd');
-        Route::livewire('/list-item', 'pages::docs.components.list-item');
-        Route::livewire('/statistic', 'pages::docs.components.statistic');
-        Route::livewire('/steps', 'pages::docs.components.steps');
-        Route::livewire('/table', 'pages::docs.components.table');
-        Route::livewire('/timeline', 'pages::docs.components.timeline');
-
-        // Data input
-        Route::livewire('/checkbox', 'pages::docs.components.checkbox');
-        Route::livewire('/choices', 'pages::docs.components.choices');
-        Route::livewire('/color-picker', 'pages::docs.components.color-picker');
-        Route::livewire('/date-time', 'pages::docs.components.date-time');
-        Route::livewire('/file-upload', 'pages::docs.components.file-upload');
-        Route::livewire('/form', 'pages::docs.components.form');
-        Route::livewire('/group', 'pages::docs.components.group');
-        Route::livewire('/image-library', 'pages::docs.components.image-library');
-        Route::livewire('/input', 'pages::docs.components.input');
-        Route::livewire('/pin', 'pages::docs.components.pin');
-        Route::livewire('/radio', 'pages::docs.components.radio');
-        Route::livewire('/rating', 'pages::docs.components.rating');
-        Route::livewire('/range-slider', 'pages::docs.components.range-slider');
-        Route::livewire('/select', 'pages::docs.components.select');
-        Route::livewire('/tags', 'pages::docs.components.tags');
-        Route::livewire('/textarea', 'pages::docs.components.textarea');
-        Route::livewire('/toggle', 'pages::docs.components.toggle');
-
-        // Feedback
-        Route::livewire('/alert', 'pages::docs.components.alert');
-        Route::livewire('/popover', 'pages::docs.components.popover');
-        Route::livewire('/progress', 'pages::docs.components.progress');
-        Route::livewire('/toast', 'pages::docs.components.toast');
-
-        // Navigation & Layout
-        Route::livewire('/breadcrumbs', 'pages::docs.components.breadcrumbs');
-        Route::livewire('/drawer', 'pages::docs.components.drawer');
-        Route::livewire('/header', 'pages::docs.components.header');
-        Route::livewire('/layout', 'pages::docs.components.layout');
-        Route::livewire('/menu', 'pages::docs.components.menu');
-        Route::livewire('/sidebar', 'pages::docs.components.sidebar');
-        Route::livewire('/tabs', 'pages::docs.components.tabs');
-
-        // Third party
-        Route::livewire('/calendar', 'pages::docs.components.calendar');
-        Route::livewire('/chart', 'pages::docs.components.chart');
-        Route::livewire('/code', 'pages::docs.components.code');
-        Route::livewire('/date-picker', 'pages::docs.components.date-picker');
-        Route::livewire('/diff', 'pages::docs.components.diff');
-        Route::livewire('/image-gallery', 'pages::docs.components.image-gallery');
-        Route::livewire('/markdown-editor', 'pages::docs.components.markdown-editor');
-        Route::livewire('/rich-text-editor', 'pages::docs.components.rich-text-editor');
-        Route::livewire('/signature', 'pages::docs.components.signature');
-        Route::livewire('/spotlight', 'pages::docs.components.spotlight');
-    });
-    #endregion /components
 });
+
+#region /components
+Route::group(['prefix' => 'components'], function () {
+    Route::get('/', fn () => response()->redirectTo('/components/button'));
+
+    // Actions
+    Route::livewire('/button', 'pages::components.button');
+    Route::livewire('/dropdown', 'pages::components.dropdown');
+    Route::livewire('/modal', 'pages::components.modal');
+    Route::livewire('/swap', 'pages::components.swap');
+    Route::livewire('/theme-toggle', 'pages::components.theme-toggle');
+
+    // Data display
+    Route::livewire('/accordion', 'pages::components.accordion');
+    Route::livewire('/avatar', 'pages::components.avatar');
+    Route::livewire('/badge', 'pages::components.badge');
+    Route::livewire('/card', 'pages::components.card');
+    Route::livewire('/carousel', 'pages::components.carousel');
+    Route::livewire('/collapse', 'pages::components.collapse');
+    Route::livewire('/icon', 'pages::components.icon');
+    Route::livewire('/kbd', 'pages::components.kbd');
+    Route::livewire('/list-item', 'pages::components.list-item');
+    Route::livewire('/statistic', 'pages::components.statistic');
+    Route::livewire('/steps', 'pages::components.steps');
+    Route::livewire('/table', 'pages::components.table');
+    Route::livewire('/timeline', 'pages::components.timeline');
+
+    // Data input
+    Route::livewire('/checkbox', 'pages::components.checkbox');
+    Route::livewire('/choices', 'pages::components.choices');
+    Route::livewire('/color-picker', 'pages::components.color-picker');
+    Route::livewire('/date-time', 'pages::components.date-time');
+    Route::livewire('/file-upload', 'pages::components.file-upload');
+    Route::livewire('/form', 'pages::components.form');
+    Route::livewire('/group', 'pages::components.group');
+    Route::livewire('/image-library', 'pages::components.image-library');
+    Route::livewire('/input', 'pages::components.input');
+    Route::livewire('/pin', 'pages::components.pin');
+    Route::livewire('/radio', 'pages::components.radio');
+    Route::livewire('/rating', 'pages::components.rating');
+    Route::livewire('/range-slider', 'pages::components.range-slider');
+    Route::livewire('/select', 'pages::components.select');
+    Route::livewire('/tags', 'pages::components.tags');
+    Route::livewire('/textarea', 'pages::components.textarea');
+    Route::livewire('/toggle', 'pages::components.toggle');
+
+    // Feedback
+    Route::livewire('/alert', 'pages::components.alert');
+    Route::livewire('/popover', 'pages::components.popover');
+    Route::livewire('/progress', 'pages::components.progress');
+    Route::livewire('/toast', 'pages::components.toast');
+
+    // Navigation & Layout
+    Route::livewire('/breadcrumbs', 'pages::components.breadcrumbs');
+    Route::livewire('/drawer', 'pages::components.drawer');
+    Route::livewire('/header', 'pages::components.header');
+    Route::livewire('/layout', 'pages::components.layout');
+    Route::livewire('/menu', 'pages::components.menu');
+    Route::livewire('/sidebar', 'pages::components.sidebar');
+    Route::livewire('/tabs', 'pages::components.tabs');
+
+    // Third party
+    Route::livewire('/calendar', 'pages::components.calendar');
+    Route::livewire('/chart', 'pages::components.chart');
+    Route::livewire('/code', 'pages::components.code');
+    Route::livewire('/date-picker', 'pages::components.date-picker');
+    Route::livewire('/diff', 'pages::components.diff');
+    Route::livewire('/image-gallery', 'pages::components.image-gallery');
+    Route::livewire('/markdown-editor', 'pages::components.markdown-editor');
+    Route::livewire('/rich-text-editor', 'pages::components.rich-text-editor');
+    Route::livewire('/signature', 'pages::components.signature');
+    Route::livewire('/spotlight', 'pages::components.spotlight');
+});
+#endregion /components
 #endregion /docs

@@ -106,6 +106,8 @@
 </head>
 
 <body class="min-h-screen font-sans antialiased transition-colors bg-base-100">
+    <x-navbar />
+
     {{ $slot }}
 
     {{-- Toast --}}
