@@ -1,17 +1,23 @@
 <div class="doc">
-    <c-header title="Badge" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Badge" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/badge/" class="btn-ghost btn-circle" tooltip="View daisyUI docs"
+                external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/badge/badge.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Badge::class" />
 
     {{-- Content --}}
-    <c-header title="Content" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="space-x-2">
+    <x-heading title="Content" />
+    <x-code language="blade" render-class="space-x-2">
         @verbatim
             <c-badge label="Content" />
             <c-badge>
@@ -21,8 +27,8 @@
     </x-code>
 
     {{-- Colors --}}
-    <c-header title="Colors" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="space-x-2">
+    <x-heading title="Colors" />
+    <x-code language="blade" render-class="space-x-2">
         @verbatim
             <c-badge label="Neutral" class="badge-neutral" />
             <c-badge label="Primary" class="badge-primary" />
@@ -47,8 +53,8 @@
     </x-code>
 
     {{-- Icons --}}
-    <c-header title="Icons" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="space-x-2">
+    <x-heading title="Icons" />
+    <x-code language="blade" render-class="space-x-2">
         @verbatim
             <c-badge label="Completed" icon="check" class="badge-success" />
             <c-badge label="In progress" icon-right="clock" class="badge-info" />
@@ -57,8 +63,8 @@
     </x-code>
 
     {{-- Combined --}}
-    <c-header title="Combined" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="space-x-2">
+    <x-heading title="Combined" />
+    <x-code language="blade" render-class="space-x-2">
         @verbatim
             <c-button>
                 Inbox

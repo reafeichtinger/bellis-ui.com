@@ -3,7 +3,7 @@
         <c-slot:end>
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/header/header.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
         </c-slot:end>
     </x-heading>
 
@@ -11,7 +11,7 @@
 
     {{-- Tags --}}
     <x-heading title="Tags" />
-    <x-code language="blade" render-content render-class="p-8">
+    <x-code language="blade" render-class="p-8">
         @verbatim
             <c-h1 title="Using h1 tag" />
             <c-h2 title="Using h2 tag" />
@@ -26,7 +26,7 @@
 
     {{-- Subtitle --}}
     <x-heading title="Subtitle" />
-    <x-code language="blade" render-content render-class="p-8">
+    <x-code language="blade" render-class="p-8">
         @verbatim
             <c-h1 title="With subtitle" subtitle="This is the subtitle." />
             <c-h2 title="With subtitle" subtitle="This is the subtitle." />
@@ -40,7 +40,7 @@
 
     {{-- Icon --}}
     <x-heading title="Icon" />
-    <x-code language="blade" render-content render-class="p-8">
+    <x-code language="blade" render-class="p-8">
         @verbatim
             <c-h1 title="With icon" icon="zap" icon-class="h-7 w-7" />
             <c-h2 title="With icon" icon="zap" icon-class="h-7 w-7" />
@@ -55,7 +55,7 @@
 
     {{-- Divider & Progress --}}
     <x-heading title="Divider & Progress" />
-    <x-code language="blade" render-content render-class="p-8 flex flex-col gap-4">
+    <x-code language="blade" render-class="p-8 flex flex-col gap-4">
         @verbatim
             <c-h1 title="Divider only" divider />
             <c-h2 title="Divider with custom class" divider divider-class="mt-3 mx-16 w-auto!" />
@@ -75,7 +75,7 @@
 
     {{-- Slots --}}
     <x-heading title="Slots" />
-    <x-code language="blade" render-content render-class="p-8">
+    <x-code language="blade" render-class="p-8">
         @verbatim
             <c-header subtitle="This is responsive" divider>
                 <c-slot:title>

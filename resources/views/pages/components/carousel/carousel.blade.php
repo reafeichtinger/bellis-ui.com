@@ -1,17 +1,23 @@
 <div class="doc">
-    <c-header title="Carousel" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Carousel" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/carousel/" class="btn-ghost btn-circle"
+                tooltip="View daisyUI docs" external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/carousel/carousel.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Carousel::class" />
 
     {{-- Content --}}
-    <c-header title="Content" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="Content" />
+    <x-code language="blade">
         @verbatim
             {{-- 
                 public array $slides = [
@@ -26,8 +32,8 @@
     </x-code>
 
     {{-- Appearence --}}
-    <c-header title="Appearence" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="grid grid-cols-1 gap-6">
+    <x-heading title="Appearence" />
+    <x-code language="blade" render-class="grid grid-cols-1 gap-6">
         @verbatim
             {{-- Class --}}
             <c-carousel :slides="$this->slides" class="mx-auto w-32! rounded-none!" />
@@ -41,8 +47,8 @@
     </x-code>
 
     {{-- Autoplay --}}
-    <c-header title="Autoplay" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="grid grid-cols-2 gap-6">
+    <x-heading title="Autoplay" />
+    <x-code language="blade" render-class="grid grid-cols-2 gap-6">
         @verbatim
             <c-carousel :slides="$this->slides" without-indicators without-arrows autoplay />
 
@@ -52,9 +58,9 @@
     </x-code>
 
     {{-- Complex --}}
-    <c-header title="Complex" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
+    <x-heading title="Complex" />
     <p>Play around removing some attributes. The only required attribute is <code>image</code>.</p>
-    <x-code language="blade" render-content>
+    <x-code language="blade">
         @verbatim
             {{-- 
                 public array $fullSlides = [
@@ -88,12 +94,12 @@
     </x-code>
 
     {{-- Content scope --}}
-    <c-header title="Content scope" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
+    <x-heading title="Content @scope" />
     <p>
         By using the special blade directive <code>@@scope</code> you have access
         to the current item from loop. Notice also you have access to the Laravel`s <code>$loop</code> variable.
     </p>
-    <x-code language="blade" render-content>
+    <x-code language="blade">
         @verbatim
             {{-- public array $slotSlides = [
                     [

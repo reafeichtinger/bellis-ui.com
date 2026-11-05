@@ -1,17 +1,23 @@
 <div class="doc">
-    <c-header title="Avatar" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Avatar" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/avatar/" class="btn-ghost btn-circle"
+                tooltip="View daisyUI docs" external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/avatar/avatar.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Avatar::class" />
 
     {{-- Default --}}
-    <c-header title="Default" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <x-heading title="Default" />
+    <x-code language="blade" render-class="grid grid-cols-1 sm:grid-cols-2 gap-8">
         @verbatim
             <c-avatar image="https://testingbot.com/free-online-tools/random-avatar/300" alt="My image" />
 
@@ -32,8 +38,8 @@
     </x-code>
 
     {{-- Slots --}}
-    <c-header title="Slots" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="Slots" />
+    <x-code language="blade">
         @verbatim
             <c-avatar image="https://testingbot.com/free-online-tools/random-avatar/300" class="w-22!">
                 <c-slot:title class="text-3xl font-bold! pl-2">

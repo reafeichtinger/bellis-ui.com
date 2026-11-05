@@ -1,11 +1,17 @@
 <div class="doc">
-    <c-header title="Collapse" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Collapse" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/collapse/" class="btn-ghost btn-circle"
+                tooltip="View daisyUI docs" external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/collapse/collapse.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Collapse::class" />
 
@@ -15,8 +21,8 @@
     </c-alert>
 
     {{-- Content --}}
-    <c-header title="Content" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="flex flex-col gap-4 p-8">
+    <x-heading title="Content" />
+    <x-code language="blade" render-class="flex flex-col gap-4 p-8">
         @verbatim
             {{-- Plain text --}}
             <c-collapse heading="Hello" content="World" />
@@ -34,8 +40,8 @@
     </x-code>
 
     {{-- wire:model --}}
-    <c-header title="wire:model" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="p-8">
+    <x-heading title="wire:model" />
+    <x-code language="blade" render-class="p-8">
         @verbatim
             <c-collapse wire:model="show" separator progress-indicator>
                 <c-slot:heading>Hey</c-slot:heading>
@@ -47,8 +53,8 @@
     </x-code>
 
     {{-- Style --}}
-    <c-header title="Style" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="p-8">
+    <x-heading title="Style" />
+    <x-code language="blade" render-class="p-8">
         @verbatim
             <c-collapse collapse-plus-minus open class="rounded-box overflow-clip">
                 <c-slot:heading class="bg-accent text-accent-content">
@@ -62,8 +68,8 @@
     </x-code>
 
     {{-- No icon --}}
-    <c-header title="No icon" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="p-8">
+    <x-heading title="No icon" />
+    <x-code language="blade" render-class="p-8">
         @verbatim
             <c-collapse no-icon separator heading="How..." content="... are you?" />
         @endverbatim

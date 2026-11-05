@@ -6,8 +6,8 @@ export default function code($el: HTMLElement): CodeData {
     return {
         async copy(target?: HTMLElement) {
             // If target is provided, use it; otherwise, use the next element
-            const el = target ?? $el.nextElementSibling as HTMLElement;
-            
+            const el = (target ?? this.$el.nextElementSibling)?.querySelector('code') as HTMLElement;
+
             if (!el) {
                 console.warn('Code: Target element not found.');
                 return;
@@ -20,12 +20,12 @@ export default function code($el: HTMLElement): CodeData {
                 });
 
                 await navigator.clipboard.write([clipboardItem]);
+                console.log();
+                const originalTip = this.$el.dataset.tip;
+                this.$el.dataset.tip = 'Copied!';
 
-                const originalTip = $el.dataset.tip;
-                $el.dataset.tip = 'Copied!';
-                
                 setTimeout(() => {
-                    $el.dataset.tip = originalTip || 'Copy';
+                    this.$el.dataset.tip = originalTip || 'Copy';
                 }, 2000);
             } catch (err) {
                 console.error('Failed to copy: ', err);

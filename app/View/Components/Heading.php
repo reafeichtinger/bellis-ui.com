@@ -35,7 +35,7 @@ class Heading extends Component
         }
 
         return <<<'BLADE'
-            <c-h2 :title="$title" x-data="heading" x-on:click.prevent="link($el)" class="scroll-mt-20 group" anchor>
+            <c-h2 :title="$title" x-data="heading" x-on:click.prevent="link($el)" class="scroll-mt-20 mt-12 group">
                 <c-slot name="icon">
                     <c-button icon="hash" icon-class="h-4 w-4"
                         tooltip-left="Copy link"

@@ -1,16 +1,22 @@
 <div class="doc">
-    <c-header title="ListItem" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="ListItem" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/list/" class="btn-ghost btn-circle" tooltip="View daisyUI docs"
+                external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/list-item/list-item.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\ListItem::class" />
 
     {{-- Content --}}
-    <c-header title="Content" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
+    <x-heading title="Content" />
     <p>
         By default, the component will load the following keys:
     </p>
@@ -22,7 +28,7 @@
             <code>$object->avatar</code> as the picture url.
         </li>
     </ul>
-    <x-code language="blade" render-content render-class="flex flex-col">
+    <x-code language="blade" render-class="flex flex-col">
         @verbatim
             @foreach ($this->users as $user)
                 <c-list-item :item="$user" subtitle="username" link="/docs/install" />
@@ -31,9 +37,9 @@
     </x-code>
 
     {{-- Accessors --}}
-    <c-header title="Accessors" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
+    <x-heading title="Accessors" />
     <p>You can overwrite the accessor keys for each section.</p>
-    <x-code language="blade" render-content render-class="flex flex-col">
+    <x-code language="blade" render-class="flex flex-col">
         @verbatim
             {{-- NOTE: `address.city` ⇒ It supports nested properties --}}
             <c-list-item :item="$this->users[0]" title="short_name" subtitle="address.city" avatar="alt_avatar" />
@@ -41,8 +47,8 @@
     </x-code>
 
     {{-- No Separator & No Hover --}}
-    <c-header title="No Separator & No Hover" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="flex flex-col">
+    <x-heading title="No Separator & No Hover" />
+    <x-code language="blade" render-class="flex flex-col">
         @verbatim
             @foreach ($this->users as $user)
                 <c-list-item :item="$user" no-separator no-hover />
@@ -51,8 +57,8 @@
     </x-code>
 
     {{-- Fully custom content --}}
-    <c-header title="Fully custom content" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="flex flex-col">
+    <x-heading title="Fully custom content" />
+    <x-code language="blade" render-class="flex flex-col">
         @verbatim
             <c-list-item :item="$this->users[0]">
                 <c-slot:avatar>

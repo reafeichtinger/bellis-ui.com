@@ -1,11 +1,12 @@
 <div class="flex flex-col space-y-6">
-    <c-header title="Installation" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Installation" level="h1">
+        <c-slot:end>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/install"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <c-alert icon="triangle-alert" class="alert-warning">
         It is recommended to install this only on fresh or small projects. Compatability with starter kits or other
@@ -46,29 +47,29 @@
         package.
     </p>
 
-    <x-code language="shellscript">
+    <x-code-only language="shellscript">
         @verbatim
             composer require reafeichtinger/bellis-ui
         @endverbatim
-    </x-code>
+    </x-code-only>
 
     <p>
         Then you can run the automatic installer to complete the setup.
     </p>
 
-    <x-code language="shellscript">
+    <x-code-only language="shellscript">
         @verbatim
             php artisan bellis:install
         @endverbatim
-    </x-code>
+    </x-code-only>
 
     <p>
         Then, start the dev server.
     </p>
 
-    <x-code language="shellscript">
+    <x-code-only language="shellscript">
         composer run dev
-    </x-code>
+    </x-code-only>
 
     <p>
         <c-icon name="zap" class="text-warning" />

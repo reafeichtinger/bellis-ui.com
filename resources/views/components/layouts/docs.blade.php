@@ -2,7 +2,7 @@
     <c-main with-nav wire:transition.navigate>
         {{-- Sidebar --}}
         <c-slot:sidebar drawer="main-drawer" class="bg-base-100">
-            <c-menu active-by-route exact active-class="text-primary" class="sm:mt-6 ms-2">
+            <c-menu active-by-route exact active-class="text-primary font-bold" class="sm:mt-6 ms-2">
                 <c-menu-title title="Documentation" class="text-base-content/50 uppercase font-normal text-xs" />
                 <c-divider class="p-4" />
                 <x-sidebar-item title="Installation" link="/docs/install" />

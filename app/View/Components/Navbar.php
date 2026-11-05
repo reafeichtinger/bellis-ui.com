@@ -14,7 +14,7 @@ class Navbar extends Component
     public function render(): View|Closure|string
     {
         return <<<'BLADE'
-            <c-navbar class="max-w-screen-2xl mx-auto bg-base-100 border-base-content/15 border-b" sticky>
+            <c-navbar class="max-w-screen-2xl mx-auto bg-base-100 border-base-content/15 border-b-(length:--border)" sticky>
                 <c-slot name="start">
                     <a href="/" wire:navigate class="flex flex-row items-center group">
                         {{-- Logo --}}

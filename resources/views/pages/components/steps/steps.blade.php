@@ -1,15 +1,22 @@
 <div class="doc">
-    <c-header title="Steps" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Steps" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/steps/" class="btn-ghost btn-circle" tooltip="View daisyUI docs"
+                external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/steps/steps.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Steps::class" />
 
-    <c-header title="Step" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
+    {{-- Step API --}}
+    <x-heading title="Step" />
     <x-component-api :class-name="Bellis\View\Components\Bellis\Step::class" />
 
     <c-alert icon="badge-info" class="alert-info">
@@ -19,8 +26,8 @@
     </c-alert>
 
     {{-- General --}}
-    <c-header title="General" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="General" />
+    <x-code language="blade">
         @verbatim
             <c-steps wire:model="step" class="border-y border-base-content/10 my-5 py-5">
                 <c-step step="1" label="Register">
@@ -41,8 +48,8 @@
     </x-code>
 
     {{-- Appearance --}}
-    <c-header title="Appearance" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="grid gap-4">
+    <x-heading title="Appearance" />
+    <x-code language="blade" render-class="grid gap-4">
         @verbatim
             <c-steps wire:model="step" step-class="step-primary">
                 {{-- Number content --}}

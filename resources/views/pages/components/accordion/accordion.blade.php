@@ -1,11 +1,17 @@
 <div class="doc">
-    <c-header title="Accordion" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Accordion" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/accordion/" class="btn-ghost btn-circle"
+                tooltip="View daisyUI docs" external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/accordion/accordion.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Accordion::class" />
 
@@ -15,8 +21,8 @@
     </c-alert>
 
     {{-- Default --}}
-    <c-header title="Default" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="Default" />
+    <x-code language="blade">
         @verbatim
             <c-accordion wire:model.live="default">
                 <c-collapse name="default1">
@@ -40,8 +46,8 @@
     </p>
 
     {{-- No join --}}
-    <c-header title="No join" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="No join" />
+    <x-code language="blade">
         @verbatim
             <c-accordion wire:model="noJoin" no-join class="flex flex-col gap-4">
                 <c-collapse name="noJoin1">

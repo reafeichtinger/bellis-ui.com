@@ -1,11 +1,17 @@
 <div class="doc">
-    <c-header title="Dropdown" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Dropdown" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/dropdown/" class="btn-ghost btn-circle"
+                tooltip="View daisyUI docs" external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/dropdown/dropdown.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Dropdown::class" />
 
@@ -15,8 +21,8 @@
     </c-alert>
 
     {{-- Default --}}
-    <c-header title="Default" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="Default" />
+    <x-code language="blade">
         @verbatim
             <c-dropdown>
                 <c-menu-item title="Archive" icon="archive" />
@@ -27,9 +33,9 @@
     </x-code>
 
     {{-- Custom trigger --}}
-    <c-header title="Custom trigger" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
+    <x-heading title="Custom trigger" />
     <p>You can overwrite the button that opens the dropdown by using the "trigger" slot.</p>
-    <x-code language="blade" render-content>
+    <x-code language="blade">
         @verbatim
             <c-dropdown>
                 <c-slot:trigger>
@@ -43,8 +49,8 @@
     </x-code>
 
     {{-- Alignment --}}
-    <c-header title="Alignment" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="text-end">
+    <x-heading title="Alignment" />
+    <x-code language="blade" render-class="text-end">
         @verbatim
             <c-dropdown label="Hello" class="btn-warning" end>
                 <c-menu-item title="It should align correctly on right side" />
@@ -58,7 +64,7 @@
         to the dropdown to manually control the position.
     </p>
 
-    <x-code language="blade" render-content render-class="flex flex-wrap justify-evenly">
+    <x-code language="blade" render-class="flex flex-wrap justify-evenly">
         @verbatim
             <c-dropdown label="Default" no-x-anchor>
                 <c-menu-item title="Hey" />
@@ -78,8 +84,8 @@
     </x-code>
 
     {{-- Scroll & max. height --}}
-    <c-header title="Scroll & max. height" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content render-class="flex flex-wrap justify-evenly">
+    <x-heading title="Scroll & max. height" />
+    <x-code language="blade" render-class="flex flex-wrap justify-evenly">
         @verbatim
             <c-dropdown label="Default">
                 @foreach ($this->array as $item)

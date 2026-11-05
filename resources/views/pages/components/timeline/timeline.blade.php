@@ -1,17 +1,23 @@
 <div class="doc">
-    <c-header title="Timeline" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Timeline" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/timeline/" class="btn-ghost btn-circle"
+                tooltip="View daisyUI docs" external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/timeline/timeline.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\TimelineItem::class" />
 
     {{-- Content --}}
-    <c-header title="Content" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="Content" />
+    <x-code language="blade">
         @verbatim
             <div class="p-8">
                 <c-timeline-item title="Register" done first />
@@ -24,8 +30,8 @@
     </x-code>
 
     {{-- Icons --}}
-    <c-header title="Icons" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="Icons" />
+    <x-code language="blade">
         @verbatim
             <div class="p-8">
                 <c-timeline-item title="Order placed" icon="map-pin" first done />
@@ -37,20 +43,14 @@
     </x-code>
 
     {{-- Appearance --}}
-    <c-header title="Appearance" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="Appearance" />
+    <x-code language="blade">
         @verbatim
             <div class="p-8">
-                <c-timeline-item 
-                    title="Order placed" 
-                    border-done-class="border-s-success" 
-                    bullet-done-class="bg-success"
+                <c-timeline-item title="Order placed" border-done-class="border-s-success" bullet-done-class="bg-success"
                     done />
 
-                <c-timeline-item 
-                    title="Delivered" 
-                    border-class="border-s-error" 
-                    bullet-class="bg-error" />
+                <c-timeline-item title="Delivered" border-class="border-s-error" bullet-class="bg-error" />
             </div>
         @endverbatim
     </x-code>

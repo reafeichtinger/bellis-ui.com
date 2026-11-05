@@ -1,18 +1,24 @@
 <div class="doc">
-    <c-header title="Card" icon="hash" icon-class="text-secondary" level="h1" with-anchor>
-        <c-slot:actions>
+    <x-heading title="Card" level="h1">
+        <c-slot:end>
+            {{-- daisyUI --}}
+            <c-button link="https://daisyui.com/components/card/" class="btn-ghost btn-circle" tooltip="View daisyUI docs"
+                external>
+                <img src="/svg/daisyui.svg" class="object-contain w-6 h-6" />
+            </c-button>
+            {{-- GitHub --}}
             <c-button icon="github"
                 link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/card/card.blade.php"
-                class="btn-ghost btn-circle me-2" tooltip="Help us improve this page" external />
-        </c-slot:actions>
-    </c-header>
+                class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
+        </c-slot:end>
+    </x-heading>
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Card::class" />
 
     {{-- Content --}}
-    <c-header title="Content" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content
-        render-class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-base-300 rounded-b-field">
+    <x-heading title="Content" />
+    <x-code language="blade"
+        render-class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-base-300 p-4 -m-2 -mt-5 rounded-box">
         @verbatim
             <c-card title="Your title" subtitle="This is the subtitle" shadow separator>
                 I have title, subtitle, shadow and separator.
@@ -38,9 +44,9 @@
     </x-code>
 
     {{-- Progress indicator --}}
-    <c-header title="Progress indicator" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content
-        render-class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-base-300 rounded-b-field">
+    <x-heading title="Progress indicator" />
+    <x-code language="blade"
+        render-class="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-base-300 p-4 -m-2 -mt-5 rounded-box">
         @verbatim
             {{-- NOTE: `separator` + `progress-indicator` --}}
             <c-card title="Some card" subtitle="Always triggers" separator progress-indicator>
@@ -55,8 +61,8 @@
     </x-code>
 
     {{-- Styling --}}
-    <c-header title="Styling" icon="hash" icon-class="text-secondary" level="h2" with-anchor />
-    <x-code language="blade" render-content>
+    <x-heading title="Styling" />
+    <x-code language="blade">
         @verbatim
             <c-card title="Custom card style" class="p-2 border-(length:--border) border-base-content bg-neutral" separator
                 body-class="p-2 bg-info rounded-full">
