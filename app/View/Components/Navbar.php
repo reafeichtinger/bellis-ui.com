@@ -16,31 +16,24 @@ class Navbar extends Component
         return <<<'BLADE'
             <c-navbar class="max-w-screen-2xl mx-auto bg-base-100 border-base-content/15 border-b-(length:--border)" sticky>
                 <c-slot name="start">
-                    <a href="/" wire:navigate class="flex flex-row items-center group">
-                        {{-- Logo --}}
-                        <img src="{{ asset('/svg/bellisui.svg') }}"
-                            class="object-contain w-11 h-11 -my-1 transition-transform duration-800 group-hover:-rotate-180" />
-                        {{-- App name --}}
-                        <span class="ms-2 me-6 font-semibold text-2xl text-stone-800 dark:text-stone-300">
-                            {{ config('app.name') }}
-                        </span>
-                    </a>
-                </c-slot name="start">
+                    <x-brand class="hidden lg:flex" />
+                </c-slot>
 
                 <c-slot name="center" class="flex items-center justify-center gap-1! lg:gap-2! ">
-                    <c-menu class="gap-3" horizontal active-by-route active-class="border-primary! rounded-b-none">
+                    <c-menu class="gap-3 hidden lg:flex" horizontal active-by-route active-class="border-b-primary! rounded-b-none">
                         {{-- Docs --}}
                         <c-menu-item label="Docs" link="/docs"
-                            class="btn-ghost border-b-(length:--border) border-transparent" icon="book-open-text"
+                            class="btn-ghost border-y-(length:--border) border-transparent" icon="book-open-text"
                             icon-class="me-1" />
                         {{-- Components --}}
                         <c-menu-item label="Components" link="/components"
-                            class="btn-ghost border-b-(length:--border) border-transparent" icon="shapes" />
+                            class="btn-ghost border-y-(length:--border) border-transparent" icon="shapes" />
                         {{-- Donation --}}
                         <c-menu-item label="Donate" link="https://github.com/sponsors/reafeichtinger" external
-                            class="btn-ghost text-primary" icon="hand-heart" />
+                            class="btn-ghost text-primary border-y-(length:--border) border-transparent" icon="hand-heart" />
                     </c-menu>
-                </c-slot name="center">
+                    <x-brand class="flex lg:hidden" />
+                </c-slot>
 
                 <c-slot name="end">
                     <c-menu class="gap-3 items-center justify-end" horizontal>
@@ -57,7 +50,7 @@ class Navbar extends Component
                         {{-- Theme toggle --}}
                         <c-theme-toggle class="btn btn-circle btn-ghost" lightTheme="bellis-light" darkTheme="bellis-dark" />
                     </c-menu>
-                </c-slot name="end">
+                </c-slot>
             </c-navbar>
             
             <div class="max-w-screen-2xl mx-auto py-2 px-6">

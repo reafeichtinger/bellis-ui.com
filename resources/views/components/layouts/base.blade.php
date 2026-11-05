@@ -8,7 +8,6 @@
     <title>{{ $title ?? config('app.name') }}</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">
     <link rel="mask-icon" href="{{ asset('/favicon.ico') }}" color="#ff2d20">
-
     {{--  Meta description  --}}
     <meta name="description" content="Gorgeous UI components for Livewire powered by daisyUI and Tailwind">
 
@@ -99,23 +98,17 @@
             gtag('config', 'G-NDC4ZLZ6D2');
         </script>
     @endif --}}
-
     @vite(['resources/css/app.css', 'resources/js/app.ts'])
-
     @stack('bellis-head')
 </head>
 
 <body class="min-h-screen font-sans antialiased transition-colors bg-base-100">
     <x-navbar />
-
     {{ $slot }}
-
     {{-- Toast --}}
     <c-toast />
-
     {{-- Spotlight --}}
     <c-spotlight search-text="Type 'a' ..." />
-
     @stack('bellis')
     @livewireScriptConfig
 </body>
