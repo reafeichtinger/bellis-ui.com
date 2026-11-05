@@ -2,7 +2,7 @@
     <c-main with-nav wire:transition.navigate>
         {{-- Sidebar --}}
         <c-slot:sidebar drawer="main-drawer" class="bg-base-100">
-            <c-menu active-by-route exact active-class="text-primary" class="sm:mt-6 ms-2">
+            <c-menu active-by-route exact active-class="text-primary" class="sm:mt-6 ms-2 mb-32">
                 <c-menu-title title="Components" class="text-base-content/50 uppercase font-normal text-xs" />
                 <c-divider class="p-4" />
                 {{-- Actions --}}
