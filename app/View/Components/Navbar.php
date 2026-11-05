@@ -59,6 +59,12 @@ class Navbar extends Component
                     </c-menu>
                 </c-slot name="end">
             </c-navbar>
+            
+            <div class="max-w-screen-2xl mx-auto py-2 px-6">
+                <c-alert title="This project is currently in alpha. Daily breaking changes are to be expected. You have been warned." 
+                    icon="megaphone"
+                    class="alert-error alert-soft" />
+            </div>
         BLADE;
     }
 }

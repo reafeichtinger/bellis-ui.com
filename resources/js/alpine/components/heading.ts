@@ -22,9 +22,8 @@ export default () => ({
             });
 
             history.pushState(null, '', href);
-            console.log($el);
-            const button = $el.querySelector('button');
 
+            const button = $el.querySelector('button');
             if (button) {
                 const originalTip = button?.dataset.tip;
                 button.dataset.tip = 'Copied!';
