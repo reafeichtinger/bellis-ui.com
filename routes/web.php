@@ -24,6 +24,7 @@ Route::group(['prefix' => 'components'], function () {
     Route::livewire('/button', 'pages::components.button');
     Route::livewire('/dropdown', 'pages::components.dropdown');
     Route::livewire('/modal', 'pages::components.modal');
+    Route::livewire('/fab', 'pages::components.fab');
     Route::livewire('/swap', 'pages::components.swap');
     Route::livewire('/theme-toggle', 'pages::components.theme-toggle');
 

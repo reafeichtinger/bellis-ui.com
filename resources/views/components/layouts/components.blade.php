@@ -13,6 +13,7 @@
                     <x-sidebar-item title="Button" link="/components/button" />
                     <x-sidebar-item title="Dropdown" link="/components/dropdown" />
                     <x-sidebar-item title="Modal" link="/components/modal" />
+                    <x-sidebar-item title="FAB / Speed Dial" link="/components/fab" />
                     <x-sidebar-item title="Swap" link="/components/swap" />
                     <x-sidebar-item title="Theme Toggle" link="/components/theme-toggle" />
                 </div>

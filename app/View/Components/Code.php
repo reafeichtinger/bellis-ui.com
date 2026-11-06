@@ -48,9 +48,9 @@ class Code extends Component
                         </div>
                     </c-slot>
                     {{-- Preview --}}
-                    <div x-show="selected === 'preview'" @class([$renderClass])>{!! Blade::render($content) !!}</div>
+                    <div x-cloak x-show="selected === 'preview'" @class([$renderClass])>{!! Blade::render($content) !!}</div>
                     {{-- Code --}}
-                    <div x-show="selected === 'code'" {{ $attributes->merge(['class' => 'relative -mx-3 -mb-5 -mt-8']) }}>
+                    <div x-cloak x-show="selected === 'code'" {{ $attributes->merge(['class' => 'relative -mx-3 -mb-5 -mt-8']) }}>
                         <c-button class="absolute top-0 -right-11 btn-ghost bg-zinc-900 hover:border-neutral btn-square" 
                             icon="clipboard" icon-class="text-zinc-50/50" tooltip-right="Copy"
                             x-data="code($el)" x-on:click="copy($el.nextElementSibling)" />
