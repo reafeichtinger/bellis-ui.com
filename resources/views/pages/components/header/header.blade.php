@@ -84,7 +84,7 @@
                 <c-slot:subtitle>
                     Wow, everything is <span class="italic text-accent">customizable</span>!
                 </c-slot:subtitle>
-                <c-slot:end>
+                <c-slot:end class="mt-4 sm:mt-0">
                     <c-button icon="funnel" class="btn-square" />
                     <c-button icon="plus" class="btn-primary btn-square" />
                 </c-slot:end>

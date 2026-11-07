@@ -42,7 +42,9 @@
                     This is the slot, it allows for <span class="text-primary">custom HTML</span>.
                 </c-slot:label>
                 <c-slot:description>
-                    This is the description slot, it also allows for <span class="text-accent">custom HTML</span>.
+                    <span> This is the description slot, it also allows for
+                        <span class="text-accent">custom HTML</span>.
+                    </span>
                 </c-slot:description>
             </c-checkbox>
         @endverbatim

@@ -85,7 +85,7 @@
 
     {{-- Scroll & max. height --}}
     <x-heading title="Scroll & max. height" />
-    <x-code language="blade" render-class="flex flex-wrap justify-evenly">
+    <x-code language="blade" render-class="flex flex-wrap justify-evenly gap-2">
         @verbatim
             <c-dropdown label="Default">
                 @foreach ($this->array as $item)

@@ -70,24 +70,24 @@
 
     {{-- Sizes --}}
     <x-heading title="Sizes" level="h3" subtitle="You can change the size of the FAB." />
-    <x-code language="blade" render-class="relative min-h-60">
+    <x-code language="blade" render-class="relative min-h-56">
         @verbatim
-            <c-fab label="XS" container-class="absolute z-1 bottom-56" class="btn-xs" />
-            <c-fab label="SM" container-class="absolute z-1 bottom-46" class="btn-sm" />
-            <c-fab label="MD" container-class="absolute z-1 bottom-34" class="btn-md" />
-            <c-fab label="LG" container-class="absolute z-1 bottom-20" />
+            <c-fab label="XS" container-class="absolute z-1 bottom-52" class="btn-xs" />
+            <c-fab label="SM" container-class="absolute z-1 bottom-42" class="btn-sm" />
+            <c-fab label="MD" container-class="absolute z-1 bottom-30" class="btn-md" />
+            <c-fab label="LG" container-class="absolute z-1 bottom-16" />
             <c-fab label="XL" container-class="absolute z-1 bottom-0" class="btn-xl" />
         @endverbatim
     </x-code>
 
     {{-- Extended sizes --}}
     <x-heading title="Extended sizes" level="h3" subtitle="You can change the size of the extended FAB too." />
-    <x-code language="blade" render-class="relative min-h-60">
+    <x-code language="blade" render-class="relative min-h-56">
         @verbatim
-            <c-fab label="Extra small" no-circle container-class="absolute z-1 bottom-56" class="btn-xs" />
-            <c-fab label="Small" no-circle container-class="absolute z-1 bottom-46" class="btn-sm" />
-            <c-fab label="Medium" no-circle container-class="absolute z-1 bottom-34" class="btn-md" />
-            <c-fab label="Large (default)" no-circle container-class="absolute z-1 bottom-20" />
+            <c-fab label="Extra small" no-circle container-class="absolute z-1 bottom-52" class="btn-xs" />
+            <c-fab label="Small" no-circle container-class="absolute z-1 bottom-42" class="btn-sm" />
+            <c-fab label="Medium" no-circle container-class="absolute z-1 bottom-30" class="btn-md" />
+            <c-fab label="Large (default)" no-circle container-class="absolute z-1 bottom-16" />
             <c-fab label="Extra large" no-circle container-class="absolute z-1 bottom-0" class="btn-xl" />
         @endverbatim
     </x-code>

@@ -88,9 +88,9 @@
             <c-form wire:submit="testSpinner2">
                 <c-input placeholder="Name" />
 
-                <c-slot:actions>
+                <c-slot:actions class="flex-wrap">
                     <c-button label="Self target" icon="circle-dashed-check" wire:click="testSpinner1" spinner />
-                    <c-button label="No target" />
+                    <c-button label="No target" wire:click="testSpinner1" />
                     <c-button label="Custom target" type="submit" class="btn-primary" icon-right="check"
                         spinner="testSpinner2" />
                 </c-slot:actions>

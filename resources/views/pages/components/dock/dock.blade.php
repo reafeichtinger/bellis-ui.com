@@ -30,7 +30,7 @@
     <x-code language="blade"
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
-            <c-dock class="relative">
+            <c-dock class="relative z-9!">
                 <c-dock-item icon="home" label="Home" />
                 <c-dock-item icon="inbox" label="Inbox" active />
                 <c-dock-item icon="settings" label="Settings" />
@@ -43,7 +43,7 @@
     <x-code language="blade"
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
-            <c-dock class="relative dock-xs">
+            <c-dock class="relative z-9! dock-xs">
                 <c-dock-item icon="home" />
                 <c-dock-item icon="inbox" active />
                 <c-dock-item icon="settings" />
@@ -56,7 +56,7 @@
     <x-code language="blade"
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
-            <c-dock class="relative dock-sm">
+            <c-dock class="relative z-9! dock-sm">
                 <c-dock-item icon="home" />
                 <c-dock-item icon="inbox" active />
                 <c-dock-item icon="settings" />
@@ -69,7 +69,7 @@
     <x-code language="blade"
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
-            <c-dock class="relative dock-md">
+            <c-dock class="relative z-9! dock-md">
                 <c-dock-item icon="home" label="Home" />
                 <c-dock-item icon="inbox" label="Inbox" active />
                 <c-dock-item icon="settings" label="Settings" />
@@ -82,7 +82,7 @@
     <x-code language="blade"
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
-            <c-dock class="relative dock-xl">
+            <c-dock class="relative z-9! dock-xl">
                 <c-dock-item icon="home" label="Home" />
                 <c-dock-item icon="inbox" label="Inbox" active />
                 <c-dock-item icon="settings" label="Settings" />
@@ -95,7 +95,7 @@
     <x-code language="blade"
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
-            <c-dock class="relative dock-xs">
+            <c-dock class="relative z-9! dock-xs">
                 <c-dock-item label="Home" />
                 <c-dock-item label="Inbox" active />
                 <c-dock-item label="Settings" />
@@ -109,7 +109,8 @@
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
             {{-- NOTE: Changing background, default text, rounded corners, border and active-class --}}
-            <c-dock class="relative bg-base-300 text-base-content rounded-t-box border-t-(length:--border) border-primary"
+            <c-dock
+                class="relative z-9! bg-base-300 text-base-content rounded-t-box border-t-(length:--border) border-primary"
                 active-class="after:bg-accent">
                 {{-- NOTE: Changing text color --}}
                 <c-dock-item icon="home" label="Home" class="text-info/75" />
@@ -158,7 +159,7 @@
     <x-code language="blade"
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
-            <c-dock class="relative" active-by-route exact>
+            <c-dock class="relative z-9!" active-by-route exact>
                 <c-dock-item icon="circle-letter-f" label="FAB" link="/components/fab" />
                 <c-dock-item icon="dock" label="Dock" link="/components/dock" />
 
@@ -174,7 +175,7 @@
     <x-code language="blade"
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
-            <c-dock class="relative">
+            <c-dock class="relative z-9!">
                 <c-dock-item icon="home" label="Home" disabled />
                 <c-dock-item icon="inbox" label="Inbox" active />
                 <c-dock-item icon="settings" label="Settings" link="/components/dock" disabled />
@@ -196,7 +197,7 @@
     <x-code language="blade"
         render-class="relative mx-auto bg-base-200 min-h-56 max-w-xs flex items-end rounded-t-box ring-(length:--border) ring-neutral">
         @verbatim
-            <c-dock class="relative">
+            <c-dock class="relative z-9!">
                 {{-- NOTE: Size & color --}}
                 <c-dock-item icon="home" label="Home" badge="new"
                     badge-class="badge-xs badge-primary badge-soft" />

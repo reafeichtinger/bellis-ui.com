@@ -150,7 +150,7 @@
                 {{ $this->exampleFour }}
             </c-modal>
 
-            <span class="ms-4">{{ $this->exampleFour }}</span>
+            <p class="mt-2">{{ $this->exampleFour }}</p>
         @endverbatim
     </x-code>
     <p>In livewire component:</p>
@@ -176,13 +176,19 @@
         @verbatim
             <c-button label="Persist" x-on:click="$dispatch('show-example-persist')" />
             <c-modal name="example-persist" title="Persist"
-                subtitle="Press `ESC` to close. Clicking outside the modal will NOT close it." persist />
+                subtitle="Press `ESC` to close. Clicking outside the modal will NOT close it." persist>
+                <c-slot:top class="relative">
+                    <div class="absolute top-2 right-2">
+                        <c-button class="btn-sm btn btn-circle btn-ghost" icon="x" x-on:click="close()" />
+                    </div>
+                </c-slot:top>
+            </c-modal>
         @endverbatim
     </x-code>
 
     {{-- Customise width, background and alignment --}}
     <x-heading title="Customise width, background and alignment" />
-    <x-code language="blade">
+    <x-code language="blade" render-class="flex flex-wrap gap-2">
         @verbatim
             {{-- NOTE: Custom width --}}
             <c-button label="Custom width" x-on:click="$dispatch('show-example-five')" />
@@ -196,13 +202,17 @@
 
             {{-- NOTE: Align end --}}
             <c-button label="Align end" x-on:click="$dispatch('show-example-seven')" />
-            <c-modal name="example-seven" title="Align end" subtitle="Press `ESC` or click outside to close."
-                container-class="modal-end" />
+            <c-modal name="example-seven" title="Align end" subtitle="Press `ESC` or click the button to close."
+                container-class="modal-end">
+                <c-button class="mt-6 btn-sm" icon="x" label="Close" x-on:click="close()" />
+            </c-modal>
 
             {{-- NOTE: Align start --}}
             <c-button label="Align start" x-on:click="$dispatch('show-example-eigth')" />
-            <c-modal name="example-eigth" title="Align start" subtitle="Press `ESC` or click outside to close."
-                container-class="modal-start" />
+            <c-modal name="example-eigth" title="Align start" subtitle="Press `ESC` or click the button to close."
+                container-class="modal-start">
+                <c-button class="mt-6 btn-sm" icon="x" label="Close" x-on:click="close()" />
+            </c-modal>
 
             {{-- NOTE: Responsive --}}
             <c-button label="Responsive" x-on:click="$dispatch('show-example-nine')" />
