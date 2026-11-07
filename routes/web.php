@@ -71,6 +71,7 @@ Route::group(['prefix' => 'components'], function () {
     // Navigation & Layout
     Route::livewire('/breadcrumbs', 'pages::components.breadcrumbs');
     Route::livewire('/drawer', 'pages::components.drawer');
+    Route::livewire('/dock', 'pages::components.dock');
     Route::livewire('/header', 'pages::components.header');
     Route::livewire('/layout', 'pages::components.layout');
     Route::livewire('/menu', 'pages::components.menu');

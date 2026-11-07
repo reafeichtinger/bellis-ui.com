@@ -68,4 +68,7 @@
             <x-footer />
         </c-slot:footer>
     </c-main>
+
+    {{-- Dock --}}
+    <x-dock :show-menu="false" />
 </div>

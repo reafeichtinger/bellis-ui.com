@@ -14,7 +14,7 @@ class ScrollToTop extends Component
     public function render(): View|Closure|string
     {
         return <<<'BLADE'
-            <c-fab icon="chevron-up" class="btn-md opacity-0 scale-0 transition-all scroll-to-top"
+            <c-fab icon="chevron-up" class="btn-md opacity-0 scale-0 transition-all scroll-to-top" container-class="bottom-20 lg:bottom-4"
                 x-data="{
                     init() {
                         const fabs = document.getElementsByClassName('scroll-to-top');

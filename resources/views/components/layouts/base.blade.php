@@ -102,14 +102,12 @@
     @stack('bellis-head')
 </head>
 
-<body class="min-h-screen font-sans antialiased transition-colors bg-base-100">
+<body class="min-h-screen font-sans antialiased transition-colors bg-base-100 relative" wire:transition.navigate>
     <x-navbar />
     {{ $slot }}
     <x-scroll-to-top />
     {{-- Toast --}}
     <c-toast />
-    {{-- Spotlight --}}
-    <c-spotlight search-text="Type 'a' ..." />
     @stack('bellis')
     @livewireScriptConfig
 </body>

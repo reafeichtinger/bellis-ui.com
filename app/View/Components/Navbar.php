@@ -16,7 +16,7 @@ class Navbar extends Component
         return <<<'BLADE'
             <c-navbar class="max-w-screen-2xl mx-auto bg-base-100 border-base-content/15 border-b-(length:--border)" sticky>
                 <c-slot name="start">
-                    <x-brand class="hidden lg:flex" />
+                    <x-brand />
                 </c-slot>
 
                 <c-slot name="center" class="flex items-center justify-center gap-1! lg:gap-2! ">
@@ -32,7 +32,6 @@ class Navbar extends Component
                         <c-menu-item label="Donate" link="https://github.com/sponsors/reafeichtinger" external
                             class="btn-ghost text-primary border-y-(length:--border) border-transparent" icon="hand-heart" />
                     </c-menu>
-                    <x-brand class="flex lg:hidden" />
                 </c-slot>
 
                 <c-slot name="end">
@@ -54,7 +53,7 @@ class Navbar extends Component
             </c-navbar>
             
             <div class="max-w-screen-2xl mx-auto py-2 px-6">
-                <c-alert title="This project is currently in alpha. Daily breaking changes are to be expected. You have been warned." 
+                <c-alert title="This project is currently in alpha and the package has not yet been released." 
                     icon="megaphone"
                     class="alert-error alert-soft" />
             </div>

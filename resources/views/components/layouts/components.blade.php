@@ -1,5 +1,5 @@
 <x-layouts.base>
-    <c-main with-nav wire:transition.navigate>
+    <c-main with-nav collapsible>
         {{-- Sidebar --}}
         <c-slot:sidebar drawer="main-drawer" class="bg-base-100">
             <c-menu active-by-route exact active-class="text-primary font-bold" class="sm:mt-6 ms-2 mb-32">
@@ -80,6 +80,7 @@
                         icon-class="transition-transform group-hover:-rotate-10 scale-95 group-hover:scale-105" />
                     <x-sidebar-item title="Breadcrumbs" link="/components/breadcrumbs" />
                     <x-sidebar-item title="Drawer" link="/components/drawer" />
+                    <x-sidebar-item title="Dock / Bottom Navigation" link="/components/dock" />
                     <x-sidebar-item title="Header" link="/components/header" />
                     <x-sidebar-item title="Layout" link="/components/layout" />
                     <x-sidebar-item title="Menu" link="/components/menu" />
@@ -114,4 +115,7 @@
             </c-slot:content>
         </c-slot:sidebar>
     </c-main>
+
+    {{-- Dock --}}
+    <x-dock />
 </x-layouts.base>

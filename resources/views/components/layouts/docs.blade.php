@@ -1,5 +1,5 @@
 <x-layouts.base>
-    <c-main with-nav wire:transition.navigate>
+    <c-main with-nav>
         {{-- Sidebar --}}
         <c-slot:sidebar drawer="main-drawer" class="bg-base-100">
             <c-menu active-by-route exact active-class="text-primary font-bold" class="sm:mt-6 ms-2">
@@ -20,4 +20,7 @@
             </c-slot:content>
         </c-slot:sidebar>
     </c-main>
+
+    {{-- Dock --}}
+    <x-dock />
 </x-layouts.base>

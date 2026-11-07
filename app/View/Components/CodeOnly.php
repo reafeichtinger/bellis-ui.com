@@ -34,7 +34,7 @@ class CodeOnly extends Component
         return <<<'BLADE'
             @php $content = $prepareSlot($slot); @endphp
             <div {{ $attributes->merge(['class' => 'relative bellis-code-only']) }}>
-                <c-button class="absolute top-0 -right-11 btn-ghost bg-zinc-900 hover:border-neutral btn-square" 
+                <c-button class="absolute top-0 right-0 xl:-right-11 btn-ghost bg-zinc-900 hover:border-neutral btn-square" 
                     icon="clipboard" icon-class="text-zinc-50/50" tooltip-right="Copy"
                     x-data="code($el)" x-on:click="copy($el.nextElementSibling)" />
                 <x-markdown :theme="$theme ?? 'aurora-x'">
