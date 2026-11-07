@@ -9,6 +9,7 @@ use Illuminate\View\Component;
 class Mobile extends Component
 {
     public function __construct(
+        public ?string $title = null,
         public array $menu = [],
     ) {}
 
@@ -21,7 +22,7 @@ class Mobile extends Component
                     {{-- Header --}}
                     <div
                         class="text-base-content/50 uppercase font-normal text-xs px-3 flex items-center flex-row justify-between">
-                        <span>Documentation</span>
+                        @if ($title)<span>{{ $title }}</span>@endif
                         <c-button icon="x" class="btn-ghost btn-circle text-base-content/50 -me-2.5"
                             x-on:click="close()" />
                     </div>

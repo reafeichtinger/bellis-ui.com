@@ -9,6 +9,7 @@ use Illuminate\View\Component;
 class Desktop extends Component
 {
     public function __construct(
+        public ?string $title = null,
         public array $menu = [],
     ) {}
 
@@ -19,7 +20,7 @@ class Desktop extends Component
                 {{-- Sidebar --}}
                 <x-slot name="sidebar" drawer="main-drawer" class="bg-base-100">
                     <c-menu active-by-route exact active-class="text-primary font-bold" class="sm:mt-6 ms-2 mb-32">
-                        <c-menu-title title="Components" class="text-base-content/50 uppercase font-normal text-xs" />
+                        <c-menu-title :title="$title" class="text-base-content/50 uppercase font-normal text-xs" />
                         {{-- Build sections --}}
                         @foreach ($menu as $section)
                             <div class="group">

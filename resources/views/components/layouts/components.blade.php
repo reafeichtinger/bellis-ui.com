@@ -99,12 +99,12 @@
     @endphp
 
     {{-- Desktop menu --}}
-    <x-menu.desktop :menu="$menu">
+    <x-menu.desktop title="Components" :menu="$menu">
         {{ $slot }}
     </x-menu.desktop>
 
     {{-- Mobile menu --}}
-    <x-menu.mobile :menu="$menu" />
+    <x-menu.mobile title="Components" :menu="$menu" />
 
     {{-- Dock --}}
     <x-dock />

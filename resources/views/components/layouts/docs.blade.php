@@ -15,12 +15,12 @@
     @endphp
 
     {{-- Desktop menu --}}
-    <x-menu.desktop :menu="$menu">
+    <x-menu.desktop title="Documentation" :menu="$menu">
         {{ $slot }}
     </x-menu.desktop>
 
     {{-- Mobile menu --}}
-    <x-menu.mobile :menu="$menu" />
+    <x-menu.mobile title="Documentation" :menu="$menu" />
 
     {{-- Dock --}}
     <x-dock />
