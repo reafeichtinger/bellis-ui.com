@@ -133,7 +133,8 @@
     </c-main>
 
     {{-- Mobile menu --}}
-    <c-modal name="main-navigation" container-class="modal-bottom">
+    <c-modal name="main-navigation" container-class="modal-bottom backdrop-blur-xs"
+        class="border-t border-base-content/15 p-2">
         <c-menu active-by-route exact active-class="text-primary font-bold">
             {{-- Header --}}
             <div
