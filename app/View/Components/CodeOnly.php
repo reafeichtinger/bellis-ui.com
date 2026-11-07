@@ -50,6 +50,7 @@ class CodeOnly extends Component
                         overflow-x: auto;
                         border-radius:var(--radius-field);
                         padding: 0.5rem;
+                        padding-inline-end: 2.5rem;
                         margin: 0;
                         background-color: var(--color-zinc-900) !important;
                     }

@@ -102,7 +102,7 @@
     @stack('bellis-head')
 </head>
 
-<body class="min-h-screen font-sans antialiased transition-colors bg-base-100 relative" wire:transition.navigate>
+<body class="min-h-screen font-sans antialiased transition-colors bg-base-100 relative">
     <x-navbar />
     {{ $slot }}
     <x-scroll-to-top />

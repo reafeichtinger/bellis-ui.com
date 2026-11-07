@@ -11,7 +11,7 @@
                 <x-sidebar-item title="Contributing" link="/docs/contributing" />
             </c-menu>
             {{-- Content --}}
-            <c-slot:content class="lg:max-w-4xl pt-10!">
+            <c-slot:content class="lg:max-w-4xl pt-10!" wire:transition.navigate>
                 {{ $slot }}
                 {{-- Footer --}}
                 <c-slot:footer>
