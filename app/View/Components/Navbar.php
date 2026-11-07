@@ -14,7 +14,7 @@ class Navbar extends Component
     public function render(): View|Closure|string
     {
         return <<<'BLADE'
-            <c-navbar class="max-w-screen-2xl mx-auto bg-base-100 border-base-content/15 border-b-(length:--border)" sticky>
+            <c-navbar class="max-w-screen-2xl mx-auto bg-base-100 border-base-content/15 border-b-(length:--border)" sticky wire:transition.navigate="navbar">
                 <c-slot name="start">
                     <x-brand />
                 </c-slot>
@@ -51,8 +51,8 @@ class Navbar extends Component
                     </c-menu>
                 </c-slot>
             </c-navbar>
-            
-            <div class="max-w-screen-2xl mx-auto py-2 px-6">
+            {{-- Alert --}}
+            <div class="max-w-screen-2xl mx-auto py-2 px-6" wire:transition.navigate="alert">
                 <c-alert title="This project is currently in alpha and the package has not yet been released." 
                     icon="megaphone"
                     class="alert-error alert-soft" />

@@ -37,7 +37,7 @@
                 @endforeach
             </c-menu>
             {{-- Content --}}
-            <c-slot:content class="lg:max-w-4xl pt-10!" wire:transition.navigate>
+            <c-slot:content class="lg:max-w-4xl pt-10!" wire:transition.navigate="content">
                 {{ $slot }}
                 {{-- Footer --}}
                 <c-slot:footer>

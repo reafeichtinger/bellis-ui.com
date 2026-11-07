@@ -1,5 +1,5 @@
 <div>
-    <c-main wire:transition.navigate>
+    <c-main wire:transition.navigate="content">
         <c-slot:content class="px-0 lg:px-0">
             <div>
                 {{-- Hero --}}
