@@ -105,6 +105,7 @@
 <body class="min-h-screen font-sans antialiased transition-colors bg-base-100">
     <x-navbar />
     {{ $slot }}
+    <x-scroll-to-top />
     {{-- Toast --}}
     <c-toast />
     {{-- Spotlight --}}

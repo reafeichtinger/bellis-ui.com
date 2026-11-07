@@ -25,8 +25,8 @@ class ComponentApi extends Component
         @endphp
         <div {{ $attributes }}>
             <p>{{ $data['description'] ?? $className }}</p>
-
-            <c-table :headers="$headers" :rows="$data['properties'] ?? []" class="border-(length:--border) border-base-content/15" container-class="mt-6 max-h-96! overflow-y-auto" >
+            <p class="mt-4 text-sm text-base-content/75">Tag: <code>{{ '<c-' . Illuminate\Support\Str::kebab(Illuminate\Support\Str::afterLast($className, '\\')) . ' />' }}</code></p>
+            <c-table :headers="$headers" :rows="$data['properties'] ?? []" class="border-(length:--border) border-base-content/15" container-class="mt-2 max-h-96! overflow-y-auto" >
                 @scope('cell_name', $property)
                     {{ str()->of($property['name'] ?? '')->kebab() }}
                 @endscope
