@@ -3,7 +3,7 @@
         <c-slot:end>
             {{-- GitHub --}}
             <c-button icon="github"
-                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/date-time/date-time.blade.php"
+                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/components/date-time/date-time.blade.php"
                 class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
         </c-slot:end>
     </x-heading>

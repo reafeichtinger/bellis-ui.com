@@ -8,7 +8,7 @@
             </c-button>
             {{-- GitHub --}}
             <c-button icon="github"
-                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/components/stat/stat.blade.php"
+                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/components/stat/stat.blade.php"
                 class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
         </c-slot:end>
     </x-heading>
