@@ -3,7 +3,7 @@
         <c-slot:end>
             {{-- GitHub --}}
             <c-button icon="github"
-                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/install"
+                link="https://github.com/reafeichtinger/bellis-ui.com/tree/main/resources/views/pages/docs/install/install.blade.php"
                 class="btn-ghost btn-circle" tooltip="Help us improve this page" external />
         </c-slot:end>
     </x-heading>
@@ -18,7 +18,7 @@
         matches these requirements:
     </p>
 
-    <ul class="list-disc ms-4">
+    <ul class="list-disc ms-6">
         <li>Laravel 12+</li>
         <li>Livewire 4.4+</li>
         <li>TailwindCSS 4.3+</li>

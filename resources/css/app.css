@@ -5,7 +5,7 @@
 @source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.php";
 @source "../../storage/framework/views/*.php";
 
-@source "../../vendor/reafeichtinger/bellis-ui/src/View/Components/**/*.php";
+@source "../../vendor/reafeichtinger/bellis-ui/src/**/*.php";
 
 @plugin "daisyui" {
     themes: false;

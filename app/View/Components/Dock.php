@@ -21,8 +21,7 @@ class Dock extends Component
                 <c-dock-item icon="shapes" label="Components" link="/components" class="active:bg-base-300" />
                 <c-divider vertical class="max-w-1" style="--border: 1px" />
                 @if ($showMenu)
-                    {{-- TODO: Toggle menu navigation --}}
-                    <c-dock-item icon="menu" label="Menu" class="active:bg-base-300" />
+                    <c-dock-item icon="menu" label="Menu" class="active:bg-base-300" x-on:click="$dispatch('show-main-navigation')" />
                 @else
                     <c-dock-item icon="hand-heart" label="Donate" class="text-primary active:bg-base-300" link="https://github.com/sponsors/reafeichtinger" external />
                 @endif
