@@ -7,5 +7,5 @@ new
 #[Layout('layouts.components')]
 class extends Component
 {
-    //
+    public bool $showAlert = true;
 };

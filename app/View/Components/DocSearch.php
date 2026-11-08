@@ -26,7 +26,6 @@ class DocSearch extends Component
                             insights: true,
                             debug: {{ Illuminate\Support\Facades\App::isProduction() ? 'false' : 'true' }}
                         });
-                        console.log('Loaded!');
                     });
                 </script>
                 <style>

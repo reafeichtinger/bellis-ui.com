@@ -20,7 +20,7 @@ class Footer extends Component
                 <c-icon name="heart-handshake" class="text-accent w-4 h-4" />
                 by 
                 <a href="https://feichtinger.dev" target="_blank"
-                    class="link hover:text-base-content">Rea Feichtinger</a>.
+                    class="link hover:text-base-content">Rea Feichtinger</a>
                 and
                 <a href="https://github.com/reafeichtinger/bellis-ui" target="_blank"
                     class="link hover:text-base-content">contributors</a>.
