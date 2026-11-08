@@ -16,7 +16,7 @@
     <x-component-api :class-name="Bellis\View\Components\Bellis\Accordion::class" />
 
     <c-alert icon="badge-info" class="alert-info">
-        This component basically just groups the <a href="/docs/components/collapse" wire:navigate
+        This component basically just groups the <a href="/components/collapse" wire:navigate
             class="link">Collapse</a> component, preventing more than one collapse from being open at the same time.
     </c-alert>
 

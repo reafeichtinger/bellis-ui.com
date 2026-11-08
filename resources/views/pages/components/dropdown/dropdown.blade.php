@@ -16,7 +16,7 @@
     <x-component-api :class-name="Bellis\View\Components\Bellis\Dropdown::class" />
 
     <c-alert icon="badge-info" class="alert-info">
-        If you need value selection instead, check out the <a href="/docs/components/select" wire:navigate
+        If you need value selection instead, check out the <a href="/components/select" wire:navigate
             class="link">Select</a> component.
     </c-alert>
 

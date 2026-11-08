@@ -22,7 +22,7 @@
         @verbatim
             <c-stat value="Just value" />
 
-            <c-stat title="With link to" value="Avatar" link="/docs/components/avatar"
+            <c-stat title="With link to" value="Avatar" link="/components/avatar"
                 class="shadow transition-colors hover:bg-primary hover:text-primary-content" />
 
             <c-stat icon="mail" icon-class="text-accent" title="Emails" value="42" tooltip="Tooltip on top" />

@@ -21,7 +21,7 @@
 
     <c-alert icon="badge-info" class="alert-info">
         For vertical steps check out the
-        <a href="/docs/components/timeline" wire:navigate class="link">Timeline</a>
+        <a href="/components/timeline" wire:navigate class="link">Timeline</a>
         component.
     </c-alert>
 

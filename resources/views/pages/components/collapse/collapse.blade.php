@@ -16,7 +16,7 @@
     <x-component-api :class-name="Bellis\View\Components\Bellis\Collapse::class" />
 
     <c-alert icon="badge-info" class="alert-info">
-        You can wrap multiple collapse components by using the <a href="/docs/components/accordion" wire:navigate
+        You can wrap multiple collapse components by using the <a href="/components/accordion" wire:navigate
             class="link">Accordion</a> component.
     </c-alert>
 
