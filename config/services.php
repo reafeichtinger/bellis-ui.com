@@ -35,4 +35,9 @@ return [
         ],
     ],
 
+    'docsearch' => [
+        'id' => env('DOCSEARCH_APP_ID'),
+        'key' => env('DOCSEARCH_APP_KEY'),
+    ],
+
 ];

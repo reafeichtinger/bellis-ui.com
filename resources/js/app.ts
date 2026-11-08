@@ -4,4 +4,7 @@ import { registerLazyAlpineComponents } from './alpine/loader';
 
 registerLazyAlpineComponents(Alpine);
 
+import docsearch from '@docsearch/js/docsearch';
+window.docsearch = docsearch;
+
 Livewire.start();

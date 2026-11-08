@@ -74,10 +74,6 @@
     {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.39.1/ace.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.39.1/ext-language_tools.min.js"></script> --}}
 
-    {{-- Algolia docsearch --}}
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
-    <link rel="preconnect" href="https://0AWOCS02I6-dsn.algolia.net" crossorigin /> --}}
-
     {{-- Umami Analytics --}}
     {{-- @if (app()->isProduction())
         <script defer src="https://analytics.robsontenorio.com/script.js" data-website-id="9dac1324-beb1-49e3-8a3f-8528fdc91df3"></script>
@@ -98,6 +94,12 @@
             gtag('config', 'G-NDC4ZLZ6D2');
         </script>
     @endif --}}
+
+    {{-- Algolia DocSearch --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@5/dist/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@5/dist/umd/docsearch.js"></script>
+    <meta name="algolia-site-verification" content="58482CDD553D5906" />
+
     @vite(['resources/css/app.css', 'resources/js/app.ts'])
     @stack('bellis-head')
 </head>

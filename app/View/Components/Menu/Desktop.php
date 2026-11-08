@@ -38,7 +38,7 @@ class Desktop extends Component
                         @endforeach
                     </c-menu>
                     {{-- Content --}}
-                    <x-slot name="content" class="lg:max-w-4xl pt-10!" wire:transition.navigate="content">
+                    <x-slot name="content" class="lg:max-w-4xl" wire:transition.navigate="content">
                         {{ $slot }}
                         {{-- Footer --}}
                         <x-slot name="footer">

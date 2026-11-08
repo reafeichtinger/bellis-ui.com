@@ -29,7 +29,7 @@
 
     {{-- Colors --}}
     <x-heading title="Colors" />
-    <x-code language="blade">
+    <x-code language="blade" render-class="flex flex-wrap gap-2">
         @verbatim
             <c-button label="Neutral" class="btn-neutral" />
             <c-button label="Primary" class="btn-primary" />
@@ -55,7 +55,7 @@
 
     {{-- Icons & Shapes --}}
     <x-heading title="Icons & Shapes" />
-    <x-code language="blade">
+    <x-code language="blade" render-class="flex flex-wrap gap-2">
         @verbatim
             <c-button label="Icon left" icon="user" />
             <c-button label="Icon right" icon-right="user" />
@@ -73,7 +73,7 @@
 
     {{-- Badges --}}
     <x-heading title="Badges" />
-    <x-code language="blade">
+    <x-code language="blade" render-class="flex flex-wrap gap-2">
         @verbatim
             <c-button label="Hello" badge="12" />
             <c-button label="There" badge="8" badge-class="badge-warning" />
@@ -100,7 +100,7 @@
 
     {{-- Links --}}
     <x-heading title="Links" />
-    <x-code language="blade">
+    <x-code language="blade" render-class="flex flex-wrap gap-2">
         @verbatim
             {{--  Uses `wire:navigate` by default --}}
             <c-button label="Go to installation" link="/docs/install" class="btn-ghost underline" />

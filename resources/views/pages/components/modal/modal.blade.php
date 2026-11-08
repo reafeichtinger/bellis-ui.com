@@ -286,4 +286,46 @@
             </c-modal>
         @endverbatim
     </x-code>
+
+    {{-- Confirmation / Multi colors --}}
+    <x-heading title="Confirmation / Multi colors"
+        subtitle="This is an example of what a multi colored confirmation modal could look like. It features a single modal that changes colors based on the type you pass to it when opening it." />
+
+    <x-code language="blade" render-class="flex flex-wrap gap-4">
+        @verbatim
+            <div {{-- Added so they are always compiled. You could use a safelist or work with full class names instead. --}}
+                class="hidden bg-neutral/10 text-neutral btn-neutral bg-error/10 text-error btn-error bg-warning/10 text-warning btn-warning bg-info/10 text-info btn-info bg-success/10 text-success btn-success">
+            </div>
+
+            {{-- Buttons --}}
+            <c-button label="Error confirmation" x-on:click="$dispatch('show-example-confirmation', { type: 'error' })"
+                class="btn-error" />
+            <c-button label="Warning confirmation"
+                x-on:click="$dispatch('show-example-confirmation', { type: 'warning' })" class="btn-warning" />
+            <c-button label="Info confirmation" x-on:click="$dispatch('show-example-confirmation', { type: 'info' })"
+                class="btn-info" />
+            <c-button label="Success confirmation"
+                x-on:click="$dispatch('show-example-confirmation', { type: 'success' })" class="btn-success" />
+
+            {{-- Modal --}}
+            <c-modal name="example-confirmation" title="Are you sure?"
+                subtitle="Press `ESC`, click outside or click `Close` to hide.">
+                <c-slot:title>
+                    <div class="flex flex-col items-center md:flex-row gap-4">
+                        <div
+                            class="bg-{{ $this->confirmationType }}/10 text-{{ $this->confirmationType }} rounded-full p-3">
+                            <c-icon :name="$this->getConfirmationIcon()" class="h-8 w-8" />
+                        </div>
+                        <c-header title="Are you sure?"
+                            subtitle="This is a very serious action that needs to be confirmed" />
+                    </div>
+                </c-slot:title>
+
+                <c-slot:actions>
+                    <c-button x-on:click="close()" label="Abort" />
+                    <c-button wire:click="confirm" label="Confirm" class="btn-{{ $this->confirmationType }}" spinner />
+                </c-slot:actions>
+            </c-modal>
+        @endverbatim
+    </x-code>
 </div>

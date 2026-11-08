@@ -35,25 +35,26 @@ class Navbar extends Component
                 </c-slot>
 
                 <c-slot name="end">
-                    <c-menu class="gap-3 items-center justify-end" horizontal>
-                        <div class="tooltip tooltip-left" data-tip="GitHub">
-                            {{-- GitHub --}}
-                            <c-menu-item link="https://github.com/reafeichtinger/bellis-ui" class="rounded-full" external>
+                    <c-menu class="gap-2 items-center justify-end" horizontal>
+                        {{-- GitHub --}}
+                        <div title="GitHub">
+                            <c-menu-item link="https://github.com/reafeichtinger/bellis-ui" class="rounded-full lg:zoom-85" external>
                                 <livewire:components.github-stars lazy class="badge-secondary badge-soft"/>
-                                <c-icon name="fab.github" class="ms-2" />
+                                <c-icon name="fab.github" class="ms-1" />
                             </c-menu-item>
                         </div>
-
-                        <c-divider vertical />
-
+                        {{-- Search --}}
+                        <x-doc-search class="hidden lg:inline" />
                         {{-- Theme toggle --}}
-                        <c-theme-toggle class="btn btn-circle btn-ghost" lightTheme="bellis-light" darkTheme="bellis-dark" />
+                        <div title="Toggle theme">
+                            <c-theme-toggle class="btn btn-circle btn-ghost" lightTheme="light" darkTheme="dark" />
+                        </div>
                     </c-menu>
                 </c-slot>
             </c-navbar>
             {{-- Alert --}}
             <div class="max-w-screen-2xl mx-auto py-2 px-6" wire:transition.navigate="alert">
-                <c-alert title="This project is currently in alpha and the package has not yet been released." 
+                <c-alert title="This project is currently in development and the package has not yet been released." 
                     icon="megaphone"
                     class="alert-error alert-soft" />
             </div>

@@ -3,7 +3,7 @@
         <c-slot:content class="px-0 lg:px-0">
             <div>
                 {{-- Hero --}}
-                <div class="max-w-340 mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
+                <div class="max-w-340 mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-24 space-y-8">
 
                     {{-- Announcement Banner --}}
                     <div class="flex justify-center">

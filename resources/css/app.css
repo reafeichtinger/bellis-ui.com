@@ -12,7 +12,7 @@
 }
 
 @plugin "daisyui/theme" {
-    name: "bellis-light";
+    name: "light";
     default: true;
     prefersdark: false;
     color-scheme: light;
@@ -58,9 +58,9 @@
 }
 
 @plugin "daisyui/theme" {
-    name: "bellis-dark";
+    name: "dark";
     default: false;
-    prefersdark: false;
+    prefersdark: true;
     color-scheme: dark;
     --font-sans: sans-serif, Vazirmatn, "Noto Sans", "Noto Sans JP", 'Outfit Variable';
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Vazirmatn, Courier New, monospace;
@@ -103,7 +103,7 @@
     --noise: 0;
 }
 
-@custom-variant dark (&:where([data-theme=bellis-dark] *));
+@custom-variant dark (&:where([data-theme=dark] *));
 
 .doc {
     @apply flex flex-col space-y-6 pb-36;
