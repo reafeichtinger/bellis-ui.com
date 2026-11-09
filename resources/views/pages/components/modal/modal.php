@@ -13,6 +13,7 @@ class extends Component
 
     public string $exampleFour = 'Show modal to see something cool...';
     public string $confirmationType = 'neutral';
+    public bool $showInitiallyOpenModal = false;
 
     public function showExampleTwo(): void
     {

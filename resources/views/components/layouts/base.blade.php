@@ -109,7 +109,7 @@
     {{ $slot }}
     <x-scroll-to-top />
     {{-- Toast --}}
-    <c-toast position="toast-center toast-bottom bottom-18 lg:bottom-4" />
+    <c-toast position="toast-center toast-bottom bottom-18 lg:bottom-6" />
     @stack('bellis')
     @livewireScriptConfig
 </body>

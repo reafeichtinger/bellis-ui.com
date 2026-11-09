@@ -83,7 +83,7 @@
             </ul>
         </x-slot:subtitle>
     </x-heading>
-    <x-code language="blade">
+    <x-code language="blade" render-class="flex flex-wrap gap-2">
         @verbatim
             <c-button label="Show" x-on:click="$dispatch('show-example-two')" />
             <c-button label="Toggle" x-on:click="$dispatch('toggle-example-two')" />
@@ -328,4 +328,24 @@
             </c-modal>
         @endverbatim
     </x-code>
+
+    {{-- Initially open --}}
+    <x-heading title="Initially open">
+        <x-slot:subtitle>
+            You can also set the modal to open on initial page load by passing the
+            <p class="inline text-xs"><code>open</code></p>
+            attribute.
+        </x-slot:subtitle>
+    </x-heading>
+    @if (!$this->showInitiallyOpenModal)
+        <c-button label="This button will initialize the modal"
+            x-on:click="$wire.showInitiallyOpenModal = true; $wire.$refresh();" />
+    @else
+        <x-code language="blade">
+            @verbatim
+                <c-modal name="example-thirteen" title="Initially open!"
+                    subtitle="Press `ESC` or click outside to close." open />
+            @endverbatim
+        </x-code>
+    @endif
 </div>

@@ -69,6 +69,7 @@ class Code extends Component
                         overflow-x: auto;
                         border-radius: 0 0 var(--radius-box) var(--radius-box);
                         padding: 0.5rem;
+                        padding-inline-end: 2.5rem;
                         margin: 0.5rem 0;
                         background-color: var(--color-zinc-900) !important;
                     }
