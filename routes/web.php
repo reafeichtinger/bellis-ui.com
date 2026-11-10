@@ -46,12 +46,20 @@ Route::group(['prefix' => 'components'], function () {
     // Data input
     Route::livewire('/checkbox', 'pages::components.checkbox');
     Route::livewire('/choices', 'pages::components.choices');
-    Route::livewire('/color-picker', 'pages::components.color-picker');
-    Route::livewire('/date-time', 'pages::components.date-time');
     Route::livewire('/file-upload', 'pages::components.file-upload');
     Route::livewire('/form', 'pages::components.form');
     Route::livewire('/group', 'pages::components.group');
     Route::livewire('/image-library', 'pages::components.image-library');
+    Route::livewire('/input-color', 'pages::components.input-color');
+    Route::livewire('/input-date', 'pages::components.input-date');
+    Route::livewire('/input-datetime', 'pages::components.input-datetime');
+    Route::livewire('/input-email', 'pages::components.input-email');
+    Route::livewire('/input-number', 'pages::components.input-number');
+    Route::livewire('/input-password', 'pages::components.input-password');
+    Route::livewire('/input-search', 'pages::components.input-search');
+    Route::livewire('/input-tel', 'pages::components.input-tel');
+    Route::livewire('/input-time', 'pages::components.input-time');
+    Route::livewire('/input-url', 'pages::components.input-url');
     Route::livewire('/input', 'pages::components.input');
     Route::livewire('/pin', 'pages::components.pin');
     Route::livewire('/radio', 'pages::components.radio');

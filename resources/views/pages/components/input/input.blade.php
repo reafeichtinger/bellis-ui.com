@@ -180,7 +180,7 @@
                 suffix="Suffix" wire:model="value" clearable>
                 <c-slot:info class="w-full flex justify-end">
                     <c-button class="btn-xs btn-info btn-soft" label="Help" tooltip="So helpful!"
-                        icon-right="circle-question-mark" />
+                        icon-right="circle-question-mark" icon-class="h-4 w-4" />
                 </c-slot:info>
                 <c-slot:start>
                     <c-button label="Start" class="join-item btn-secondary" />
