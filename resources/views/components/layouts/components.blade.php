@@ -53,7 +53,7 @@
                     ['title' => 'Input time', 'link' => '/components/input-time'],
                     ['title' => 'Input url', 'link' => '/components/input-url'],
                     ['title' => 'Input', 'link' => '/components/input'],
-                    ['title' => 'Pin', 'link' => '/components/pin', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Pin', 'link' => '/components/pin'],
                     ['title' => 'Radio', 'link' => '/components/radio', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
                     ['title' => 'Range slider', 'link' => '/components/range-slider', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
                     ['title' => 'Rating', 'link' => '/components/rating', 'badge' => 'wip', 'badgeClass' => 'badge-info'],

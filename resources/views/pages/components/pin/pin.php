@@ -7,5 +7,5 @@ new
 #[Layout('layouts.components')]
 class extends Component
 {
-    //
+    public ?string $value = null;
 };
