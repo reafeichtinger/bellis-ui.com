@@ -32,7 +32,7 @@ class Desktop extends Component
                                 @endif
                                 {{-- Build items --}}
                                 @foreach ($section['items'] as $item)
-                                    <x-sidebar-item :title="$item['title'] ?? null" :link="$item['link'] ?? null" />
+                                    <x-sidebar-item :title="$item['title'] ?? null" :link="$item['link'] ?? null" :badge="$item['badge'] ?? null" :badge-class="$item['badgeClass'] ?? null" />
                                 @endforeach
                             </div>
                         @endforeach

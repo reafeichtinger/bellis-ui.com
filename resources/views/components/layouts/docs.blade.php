@@ -6,9 +6,9 @@
                 'icon' => 'sparkles',
                 'items' => [
                     ['title' => 'Installation', 'link' => '/docs/install'],
-                    ['title' => 'Themes', 'link' => '/docs/themes'],
-                    ['title' => 'Config', 'link' => '/docs/config'],
-                    ['title' => 'Contributing', 'link' => '/docs/contributing'],
+                    ['title' => 'Themes', 'link' => '/docs/themes', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Config', 'link' => '/docs/config', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Contributing', 'link' => '/docs/contributing', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
                 ],
             ],
         ];

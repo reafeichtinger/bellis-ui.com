@@ -26,7 +26,7 @@
     <x-code language="blade" render-class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         @verbatim
             <c-input-number label="Using number component" wire:model="value" />
-            <c-input type="search" label="Using input component" wire:model="value" />
+            <c-input type="number" label="Using input component" wire:model="value" />
         @endverbatim
     </x-code>
 </div>
