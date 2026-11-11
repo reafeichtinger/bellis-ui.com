@@ -27,14 +27,14 @@
     <x-heading title="Digits" subtitle="You can freely define the length." />
     <x-code language="blade" render-class="grid gap-4">
         @verbatim
-            <c-pin wire:model="value" digits="1" />
-            <c-pin wire:model="value" digits="2" />
+            <c-pin wire:model="value" digits="1" class="input-xl" />
+            <c-pin wire:model="value" digits="2" class="input-lg" />
             <c-pin wire:model="value" digits="3" />
             <c-pin wire:model="value" digits="4" />
             <c-pin wire:model="value" digits="5" />
             <c-pin wire:model="value" digits="6" />
-            <c-pin wire:model="value" digits="7" />
-            <c-pin wire:model="value" digits="8" />
+            <c-pin wire:model="value" digits="7" class="input-sm" />
+            <c-pin wire:model="value" digits="8" class="input-xs" />
         @endverbatim
     </x-code>
 
@@ -105,15 +105,16 @@
             event is dispatched. </br>
             When the pin is NOT fully filled the
             <p class="inline text-xs"><code>pin-incomplete</code></p>
-            event is dispatched.
+            event is dispatched. </br>
+            The dispatched events always include the
+            <p class="inline text-xs"><code>value</code></p>
+            and the
+            <p class="inline text-xs"><code>field</code></p>.
         </x-slot:subtitle>
     </x-heading>
     <x-code language="blade" render-class="grid gap-4">
         @verbatim
-            <c-pin wire:model="value" />
-
-            <c-alert icon="party-popper" title="The pin has been completed!" x-cloak x-data="{ show: false }"
-                x-on:pin-complete.window="show = true" x-on:pin-incomplete.window="show = false" />
+            <c-pin wire:model="events" />
         @endverbatim
     </x-code>
 </div>
