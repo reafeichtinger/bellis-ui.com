@@ -29,7 +29,7 @@
     <x-heading title="General" />
     <x-code language="blade">
         @verbatim
-            <c-steps wire:model="step" class="border-y border-base-content/10 my-5 py-5">
+            <c-steps wire:model="step" class="border-y border-base-content/15 my-5 py-5">
                 <c-step step="1" label="Register">
                     The content of the register step.
                 </c-step>

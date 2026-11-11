@@ -38,7 +38,6 @@
                 'items' => [
                     ['title' => 'Checkbox', 'link' => '/components/checkbox'],
                     ['title' => 'Choices', 'link' => '/components/choices'],
-                    ['title' => 'File upload', 'link' => '/components/file-upload'],
                     ['title' => 'Form', 'link' => '/components/form'],
                     ['title' => 'Group', 'link' => '/components/group'],
                     ['title' => 'Image library', 'link' => '/components/image-library'],
@@ -46,6 +45,7 @@
                     ['title' => 'Input date', 'link' => '/components/input-date'],
                     ['title' => 'Input datetime', 'link' => '/components/input-datetime'],
                     ['title' => 'Input email', 'link' => '/components/input-email'],
+                    ['title' => 'Input file', 'link' => '/components/input-file'],
                     ['title' => 'Input number', 'link' => '/components/input-number'],
                     ['title' => 'Input password', 'link' => '/components/input-password'],
                     ['title' => 'Input phone', 'link' => '/components/input-tel'],
@@ -71,6 +71,7 @@
                     ['title' => 'Popover', 'link' => '/components/popover'],
                     ['title' => 'Progress', 'link' => '/components/progress'],
                     ['title' => 'Toast', 'link' => '/components/toast'],
+                    ['title' => 'Validation group', 'link' => '/components/validation-group'],
                 ],
             ],
             'layout' => [

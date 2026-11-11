@@ -46,7 +46,6 @@ Route::group(['prefix' => 'components'], function () {
     // Data input
     Route::livewire('/checkbox', 'pages::components.checkbox');
     Route::livewire('/choices', 'pages::components.choices');
-    Route::livewire('/file-upload', 'pages::components.file-upload');
     Route::livewire('/form', 'pages::components.form');
     Route::livewire('/group', 'pages::components.group');
     Route::livewire('/image-library', 'pages::components.image-library');
@@ -54,6 +53,7 @@ Route::group(['prefix' => 'components'], function () {
     Route::livewire('/input-date', 'pages::components.input-date');
     Route::livewire('/input-datetime', 'pages::components.input-datetime');
     Route::livewire('/input-email', 'pages::components.input-email');
+    Route::livewire('/input-file', 'pages::components.input-file');
     Route::livewire('/input-number', 'pages::components.input-number');
     Route::livewire('/input-password', 'pages::components.input-password');
     Route::livewire('/input-search', 'pages::components.input-search');
@@ -63,8 +63,8 @@ Route::group(['prefix' => 'components'], function () {
     Route::livewire('/input', 'pages::components.input');
     Route::livewire('/pin', 'pages::components.pin');
     Route::livewire('/radio', 'pages::components.radio');
-    Route::livewire('/rating', 'pages::components.rating');
     Route::livewire('/range-slider', 'pages::components.range-slider');
+    Route::livewire('/rating', 'pages::components.rating');
     Route::livewire('/select', 'pages::components.select');
     Route::livewire('/tags', 'pages::components.tags');
     Route::livewire('/textarea', 'pages::components.textarea');
@@ -75,6 +75,7 @@ Route::group(['prefix' => 'components'], function () {
     Route::livewire('/popover', 'pages::components.popover');
     Route::livewire('/progress', 'pages::components.progress');
     Route::livewire('/toast', 'pages::components.toast');
+    Route::livewire('/validation-group', 'pages::components.validation-group');
 
     // Navigation & Layout
     Route::livewire('/breadcrumbs', 'pages::components.breadcrumbs');

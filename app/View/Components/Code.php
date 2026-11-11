@@ -34,7 +34,7 @@ class Code extends Component
         return <<<'BLADE'
             @php $content = $prepareSlot($slot); @endphp
             <div x-data="{ selected: 'preview' }">
-                <c-mockup-browser toolbar-class="border-b-(length:--border) border-b-base-content/10 mt-0">
+                <c-mockup-browser toolbar-class="border-b-(length:--border) border-b-base-content/15 mt-0">
                     <c-slot name="url" class="flex-1 flex items-center justify-end">
                         <div class="tabs tabs-lift tabs-sm -me-3 mt-1 -mb-(--border)">
                             <a role="tab" x-on:click="selected = 'preview'" class="tab" x-bind:class="selected == 'preview' && 'tab-active'">

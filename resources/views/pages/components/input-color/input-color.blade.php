@@ -23,7 +23,7 @@
             <c-input-color wire:model="color1" label="Pick a color" description="A nice color" />
             <c-input-color wire:model="color3" label="Suffix" suffix="Hex code" />
             <c-input-color wire:model="color2" label="Icon" icon="swatch-book" />
-            <c-input-color wire:model="color2" label="End" icon-end="swatch-book" end />
+            <c-input-color wire:model="color2" label="End" icon-end="swatch-book" flip />
             <c-input-color wire:model="color4" label="Color" placeholder="Inline example" inline />
         @endverbatim
     </x-code>
