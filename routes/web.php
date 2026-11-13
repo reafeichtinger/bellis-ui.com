@@ -63,7 +63,7 @@ Route::group(['prefix' => 'components'], function () {
     Route::livewire('/input', 'pages::components.input');
     Route::livewire('/pin', 'pages::components.pin');
     Route::livewire('/radio', 'pages::components.radio');
-    Route::livewire('/range-slider', 'pages::components.range-slider');
+    Route::livewire('/range', 'pages::components.range');
     Route::livewire('/rating', 'pages::components.rating');
     Route::livewire('/select', 'pages::components.select');
     Route::livewire('/tags', 'pages::components.tags');

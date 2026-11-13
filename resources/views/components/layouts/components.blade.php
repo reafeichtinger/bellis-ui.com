@@ -1,4 +1,5 @@
 <x-layouts.base>
+    {{-- blade-formatter-disable --}}
     @php
         $menu = [
             'actions' => [
@@ -28,7 +29,7 @@
                     ['title' => 'List Item', 'link' => '/components/list-item'],
                     ['title' => 'Statistic', 'link' => '/components/statistic'],
                     ['title' => 'Steps', 'link' => '/components/steps'],
-                    ['title' => 'Table', 'link' => '/components/table', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Table', 'link' => '/components/table', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Timeline', 'link' => '/components/timeline'],
                 ],
             ],
@@ -37,10 +38,10 @@
                 'icon' => 'pencil-line',
                 'items' => [
                     ['title' => 'Checkbox', 'link' => '/components/checkbox'],
-                    ['title' => 'Choices', 'link' => '/components/choices', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Choices', 'link' => '/components/choices', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Form', 'link' => '/components/form'],
                     ['title' => 'Group', 'link' => '/components/group'],
-                    ['title' => 'Image library', 'link' => '/components/image-library', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Image library', 'link' => '/components/image-library', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Input color', 'link' => '/components/input-color'],
                     ['title' => 'Input date', 'link' => '/components/input-date'],
                     ['title' => 'Input datetime', 'link' => '/components/input-datetime'],
@@ -54,13 +55,13 @@
                     ['title' => 'Input url', 'link' => '/components/input-url'],
                     ['title' => 'Input', 'link' => '/components/input'],
                     ['title' => 'Pin', 'link' => '/components/pin'],
-                    ['title' => 'Radio', 'link' => '/components/radio', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Range slider', 'link' => '/components/range-slider', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Rating', 'link' => '/components/rating', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Select', 'link' => '/components/select', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Tags', 'link' => '/components/tags', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Textarea', 'link' => '/components/textarea', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Toggle', 'link' => '/components/toggle', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Radio', 'link' => '/components/radio'],
+                    ['title' => 'Range slider', 'link' => '/components/range', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Rating', 'link' => '/components/rating', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Select', 'link' => '/components/select', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Tags', 'link' => '/components/tags', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Textarea', 'link' => '/components/textarea', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Toggle', 'link' => '/components/toggle', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                 ],
             ],
             'feedback' => [
@@ -68,9 +69,9 @@
                 'icon' => 'message-circle-more',
                 'items' => [
                     ['title' => 'Alert', 'link' => '/components/alert'],
-                    ['title' => 'Popover', 'link' => '/components/popover', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Progress', 'link' => '/components/progress', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Toast', 'link' => '/components/toast', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Popover', 'link' => '/components/popover', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Progress', 'link' => '/components/progress', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Toast', 'link' => '/components/toast', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Validation group', 'link' => '/components/validation-group'],
                 ],
             ],
@@ -78,14 +79,14 @@
                 'title' => 'Navigation & Layout',
                 'icon' => 'cable',
                 'items' => [
-                    ['title' => 'Breadcrumbs', 'link' => '/components/breadcrumbs', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Drawer', 'link' => '/components/drawer', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Breadcrumbs', 'link' => '/components/breadcrumbs', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Drawer', 'link' => '/components/drawer', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Dock / Bottom Navigation', 'link' => '/components/dock'],
                     ['title' => 'Header', 'link' => '/components/header'],
-                    ['title' => 'Layout', 'link' => '/components/layout', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Menu', 'link' => '/components/menu', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Sidebar', 'link' => '/components/sidebar', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Tabs', 'link' => '/components/tabs', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Layout', 'link' => '/components/layout', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Menu', 'link' => '/components/menu', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Sidebar', 'link' => '/components/sidebar', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Tabs', 'link' => '/components/tabs', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                 ],
             ],
             'third-party' => [
@@ -106,6 +107,7 @@
             ],
         ];
     @endphp
+    {{-- blade-formatter-enable --}}
 
     {{-- Desktop menu --}}
     <x-menu.desktop title="Components" :menu="$menu">

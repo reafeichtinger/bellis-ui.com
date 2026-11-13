@@ -1,4 +1,5 @@
 <x-layouts.base>
+    {{-- blade-formatter-disable --}}
     @php
         $menu = [
             'getting-started' => [
@@ -6,13 +7,14 @@
                 'icon' => 'sparkles',
                 'items' => [
                     ['title' => 'Installation', 'link' => '/docs/install'],
-                    ['title' => 'Themes', 'link' => '/docs/themes', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Config', 'link' => '/docs/config', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
-                    ['title' => 'Contributing', 'link' => '/docs/contributing', 'badge' => 'wip', 'badgeClass' => 'badge-info'],
+                    ['title' => 'Themes', 'link' => '/docs/themes', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Config', 'link' => '/docs/config', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Contributing', 'link' => '/docs/contributing', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                 ],
             ],
         ];
     @endphp
+    {{-- blade-formatter-enable --}}
 
     {{-- Desktop menu --}}
     <x-menu.desktop title="Documentation" :menu="$menu">

@@ -17,7 +17,7 @@ class extends Component
     #[On('pin-complete')]
     public function onPinComplete(mixed $value, string $field): void
     {
-        if ($field == 'events') {
+        if ($field === 'events') {
             $this->info('You can listen to the completed event in Livewire or via AlpineJS. Value: ' . $value, timeout: 10000);
         }
     }

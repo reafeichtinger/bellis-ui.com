@@ -15,16 +15,23 @@
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Pin::class" />
 
-    {{-- Default --}}
-    <x-heading title="Default" />
+    <c-alert icon="badge-info" class="alert-info">
+        This component is structured similarly to the
+        <a href="/components/input" wire:navigate class="link">Input</a>
+        component. Most options can be used in the same way.
+    </c-alert>
+
+    {{-- Example --}}
+    <x-heading title="Example" />
     <x-code language="blade">
         @verbatim
-            <c-pin wire:model="value" />
+            <c-pin wire:model="value" label="Code verification" description="Input the code we have sent you via email."
+                info="The code is valid for 15 minutes." required />
         @endverbatim
     </x-code>
 
-    {{-- Digits --}}
-    <x-heading title="Digits" subtitle="You can freely define the length." />
+    {{-- Digits & size --}}
+    <x-heading title="Digits & size" subtitle="You can freely define the length and size." />
     <x-code language="blade" render-class="grid gap-4">
         @verbatim
             <c-pin wire:model="value" digits="1" class="input-xl" />
@@ -117,4 +124,16 @@
             <c-pin wire:model="events" />
         @endverbatim
     </x-code>
+    {{-- blade-formatter-disable --}}
+    <x-code-only language="php" tabs="8">
+        #[On('pin-complete')]
+        public function onPinComplete(mixed $value, string $field): void
+        {
+            // You should probably also add some validation
+            if ($field === 'events') {
+                $this->info('You can listen to the completed event in Livewire or via AlpineJS. Value: ' . $value, timeout: 10000);
+            }
+        }
+    </x-code-only>
+    {{-- blade-formatter-enable --}}
 </div>
