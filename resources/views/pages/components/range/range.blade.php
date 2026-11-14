@@ -69,4 +69,13 @@
             </c-range>
         @endverbatim
     </x-code>
+
+    {{-- Default --}}
+    <x-heading title="Default"
+        subtitle="Vertical does not work together with indicator and might not work well with other options." />
+    <x-code language="blade" render-class="p-4">
+        @verbatim
+            <c-range wire:model.live.debounce="value" label="Select a level" description="Greater than 10." vertical />
+        @endverbatim
+    </x-code>
 </div>

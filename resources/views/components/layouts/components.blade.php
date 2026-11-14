@@ -56,7 +56,7 @@
                     ['title' => 'Input', 'link' => '/components/input'],
                     ['title' => 'Pin', 'link' => '/components/pin'],
                     ['title' => 'Radio', 'link' => '/components/radio'],
-                    ['title' => 'Range slider', 'link' => '/components/range', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Range slider', 'link' => '/components/range'],
                     ['title' => 'Rating', 'link' => '/components/rating', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Select', 'link' => '/components/select', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Tags', 'link' => '/components/tags', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
