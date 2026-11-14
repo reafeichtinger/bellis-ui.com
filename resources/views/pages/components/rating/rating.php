@@ -35,4 +35,6 @@ class extends Component
     public ?float $ratingNullable = 2;
     public ?float $ratingHalf = 2.5;
     public ?float $ratingHalfNullable = 2.5;
+    public ?float $ratingEnabled = 2;
+    public ?float $ratingDisabled = 2;
 };

@@ -26,7 +26,7 @@
     <x-code language="blade">
         @verbatim
             @php
-                $users = [
+                $poisons = [
                     ['valueKey' => 'tea', 'labelKey' => 'Tea'],
                     ['valueKey' => 'coffee', 'labelKey' => 'Coffee'],
                     ['valueKey' => 'alcohol', 'labelKey' => 'Alcohol', 'disabled' => true],
@@ -34,7 +34,7 @@
                 ];
             @endphp
 
-            <c-group :options="$users" option-value="valueKey" option-label="labelKey" label="Pick your poison"
+            <c-group :options="$poisons" option-value="valueKey" option-label="labelKey" label="Pick your poison"
                 description="You shouldn't actually pick poison! 🤢" wire:model.live="poison"
                 class="checked:btn-primary! btn-sm" />
 

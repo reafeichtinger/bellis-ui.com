@@ -112,4 +112,14 @@
         @endverbatim
         {{-- blade-formatter-enable --}}
     </x-code>
+
+    {{-- Disabled --}}
+    <x-heading title="Disabled" />
+    <x-code language="blade" render-class="grid gap-4">
+        @verbatim
+            {{-- NOTE: `disabled` --}}
+            <c-rating wire:model="ratingEnabled" />
+            <c-rating wire:model="ratingDisabled" disabled />
+        @endverbatim
+    </x-code>
 </div>
