@@ -58,10 +58,10 @@
                     ['title' => 'Radio', 'link' => '/components/radio'],
                     ['title' => 'Range slider', 'link' => '/components/range'],
                     ['title' => 'Rating', 'link' => '/components/rating'],
-                    ['title' => 'Select', 'link' => '/components/select', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Select', 'link' => '/components/select'],
                     ['title' => 'Tags', 'link' => '/components/tags', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
-                    ['title' => 'Textarea', 'link' => '/components/textarea', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
-                    ['title' => 'Toggle', 'link' => '/components/toggle', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Textarea', 'link' => '/components/textarea'],
+                    ['title' => 'Toggle', 'link' => '/components/toggle'],
                 ],
             ],
             'feedback' => [

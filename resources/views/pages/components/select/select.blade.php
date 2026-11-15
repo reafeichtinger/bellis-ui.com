@@ -22,8 +22,7 @@
             <c-select label="Poison" placeholder="Pick a poison..." icon="beer"
                 description="You shouldn't actually pick poison! 🤢" wire:model="value" :options="$this->poisons" />
 
-            <c-select label="Right icon" wire:model="value" :options="$this->poisons" icon-end="map-pin"
-                class="[&::picker(select)]:max-h-26" />
+            <c-select label="Right icon" wire:model="value" :options="$this->poisons" icon-end="map-pin" />
 
             <c-select label="Clearable" wire:model="value" :options="$this->poisons" placeholder="Clearable field"
                 clearable />
@@ -35,12 +34,15 @@
         @endverbatim
     </x-code>
 
-    {{-- State --}}
-    <x-heading title="State" />
+    {{-- State, native look and dropdown height --}}
+    <x-heading title="State, native look and dropdown height" />
     <x-code language="blade" render-class="p-4 grid lg:grid-cols-2 gap-4">
         @verbatim
             <c-select label="Disabled" icon="map-pin" wire:model="poison" :options="$this->poisons" disabled />
             <c-select label="Readonly" icon="map-pin" wire:model="poison" :options="$this->poisons" readonly />
+            <c-select label="Native" icon="map-pin" wire:model="poison" :options="$this->poisons" class="appearance-none" />
+            <c-select label="Max. height" icon="map-pin" wire:model="poison" :options="$this->poisons"
+                class="[&::picker(select)]:max-h-26" />
         @endverbatim
     </x-code>
 
@@ -49,14 +51,14 @@
     <x-code language="blade" render-class="p-4 grid lg:grid-cols-2 gap-4">
         @verbatim
             <c-select label="Default" :options="$this->poisons" />
-            <c-select label="Primary" class="input-primary" :options="$this->poisons" />
-            <c-select label="Secondary" class="input-secondary" :options="$this->poisons" />
-            <c-select label="Accent" class="input-accent" :options="$this->poisons" />
-            <c-select label="Error" class="input-error" :options="$this->poisons" />
-            <c-select label="Warning" class="input-warning" :options="$this->poisons" />
-            <c-select label="Info" class="input-info" :options="$this->poisons" />
-            <c-select label="Success" class="input-success" :options="$this->poisons" />
-            <c-select label="Ghost" class="input-ghost" placeholder="I'm a ghost" :options="$this->poisons" />
+            <c-select label="Primary" class="select-primary" :options="$this->poisons" />
+            <c-select label="Secondary" class="select-secondary" :options="$this->poisons" />
+            <c-select label="Accent" class="select-accent" :options="$this->poisons" />
+            <c-select label="Error" class="select-error" :options="$this->poisons" />
+            <c-select label="Warning" class="select-warning" :options="$this->poisons" />
+            <c-select label="Info" class="select-info" :options="$this->poisons" />
+            <c-select label="Success" class="select-success" :options="$this->poisons" />
+            <c-select label="Ghost" class="select-ghost" placeholder="I'm a ghost" :options="$this->poisons" />
             <c-select label="Background" class="bg-base-300" :options="$this->poisons" />
         @endverbatim
     </x-code>
