@@ -69,8 +69,9 @@
                 'icon' => 'message-circle-more',
                 'items' => [
                     ['title' => 'Alert', 'link' => '/components/alert'],
+                    ['title' => 'Loading', 'link' => '/components/loading'],
                     ['title' => 'Popover', 'link' => '/components/popover'],
-                    ['title' => 'Progress', 'link' => '/components/progress', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Progress', 'link' => '/components/progress'],
                     ['title' => 'Toast', 'link' => '/components/toast', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Validation group', 'link' => '/components/validation-group'],
                 ],

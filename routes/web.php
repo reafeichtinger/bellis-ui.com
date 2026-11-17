@@ -72,6 +72,7 @@ Route::group(['prefix' => 'components'], function () {
 
     // Feedback
     Route::livewire('/alert', 'pages::components.alert');
+    Route::livewire('/loading', 'pages::components.loading');
     Route::livewire('/popover', 'pages::components.popover');
     Route::livewire('/progress', 'pages::components.progress');
     Route::livewire('/toast', 'pages::components.toast');
