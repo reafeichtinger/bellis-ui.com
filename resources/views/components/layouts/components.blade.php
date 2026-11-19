@@ -80,14 +80,14 @@
                 'title' => 'Navigation & Layout',
                 'icon' => 'cable',
                 'items' => [
-                    ['title' => 'Breadcrumbs', 'link' => '/components/breadcrumbs', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Breadcrumbs', 'link' => '/components/breadcrumbs'],
                     ['title' => 'Drawer', 'link' => '/components/drawer', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Dock / Bottom Navigation', 'link' => '/components/dock'],
                     ['title' => 'Header', 'link' => '/components/header'],
                     ['title' => 'Layout', 'link' => '/components/layout', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Menu', 'link' => '/components/menu', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['title' => 'Sidebar', 'link' => '/components/sidebar', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
-                    ['title' => 'Tabs', 'link' => '/components/tabs', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['title' => 'Tabs', 'link' => '/components/tabs'],
                 ],
             ],
             'third-party' => [
