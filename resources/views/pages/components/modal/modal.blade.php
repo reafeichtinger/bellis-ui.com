@@ -200,17 +200,17 @@
             <c-modal name="example-six" title="Backdrop blur" subtitle="Press `ESC` or click outside to close."
                 container-class="transition-all backdrop-blur-xs" />
 
-            {{-- NOTE: Align end --}}
-            <c-button label="Align end" x-on:click="$dispatch('show-example-seven')" />
-            <c-modal name="example-seven" title="Align end" subtitle="Press `ESC` or click the button to close."
-                container-class="modal-end">
-                <c-button class="mt-6 btn-sm" icon="x" label="Close" x-on:click="close()" />
-            </c-modal>
-
             {{-- NOTE: Align start --}}
             <c-button label="Align start" x-on:click="$dispatch('show-example-eigth')" />
             <c-modal name="example-eigth" title="Align start" subtitle="Press `ESC` or click the button to close."
                 container-class="modal-start">
+                <c-button class="mt-6 btn-sm" icon="x" label="Close" x-on:click="close()" />
+            </c-modal>
+
+            {{-- NOTE: Align end --}}
+            <c-button label="Align end" x-on:click="$dispatch('show-example-seven')" />
+            <c-modal name="example-seven" title="Align end" subtitle="Press `ESC` or click the button to close."
+                container-class="modal-end">
                 <c-button class="mt-6 btn-sm" icon="x" label="Close" x-on:click="close()" />
             </c-modal>
 
