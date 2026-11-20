@@ -6,10 +6,10 @@
                 'title' => 'Gettings started',
                 'icon' => 'sparkles',
                 'items' => [
-                    ['title' => 'Installation', 'link' => '/docs/install'],
-                    ['title' => 'Themes', 'link' => '/docs/themes', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
-                    ['title' => 'Config', 'link' => '/docs/config', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
-                    ['title' => 'Contributing', 'link' => '/docs/contributing', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['label' => 'Installation', 'link' => '/docs/install'],
+                    ['label' => 'Themes', 'link' => '/docs/themes', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['label' => 'Config', 'link' => '/docs/config', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
+                    ['label' => 'Contributing', 'link' => '/docs/contributing', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                 ],
             ],
         ];

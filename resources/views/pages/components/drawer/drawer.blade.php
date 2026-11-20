@@ -16,8 +16,6 @@
     <c-alert icon="badge-info" class="alert-info">
         There is no dedicated Drawer component. Instead you can use the
         <a href="/components/modal" wire:navigate class="link">Modal</a>
-        or
-        <a href="/components/sidebar" wire:navigate class="link">Sidebar</a>
         components to achieve drawer style layouts
     </c-alert>
 

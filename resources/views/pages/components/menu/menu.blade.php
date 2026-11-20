@@ -32,9 +32,9 @@
     <x-code language="blade" render-class="flex justify-center">
         @verbatim
             <c-menu class="border border-base-content/10 w-64!">
-                <c-menu-item title="Home" icon="home" />
-                <c-menu-item title="Messages" icon="mail" />
-                <c-menu-item title="My settings" icon="zap" />
+                <c-menu-item label="Home" icon="home" />
+                <c-menu-item label="Messages" icon="mail" />
+                <c-menu-item label="My settings" icon="zap" />
             </c-menu>
         @endverbatim
     </x-code>
@@ -44,9 +44,9 @@
     <x-code language="blade" render-class="flex justify-center">
         @verbatim
             <c-menu class="border border-base-content/10 w-64! gap-3">
-                <c-menu-item title="Home" icon="home" class="text-secondary" icon-class="text-secondary" />
-                <c-menu-item title="Messages" icon="mail" badge="1" badge-class="badge-soft badge-error" />
-                <c-menu-item title="My settings" icon="zap" badge="new" badge-class="float-right" />
+                <c-menu-item label="Home" icon="home" class="text-secondary" icon-class="text-secondary" />
+                <c-menu-item label="Messages" icon="mail" badge="1" badge-class="badge-soft badge-error" />
+                <c-menu-item label="My settings" icon="zap" badge="new" badge-class="float-right" />
             </c-menu>
         @endverbatim
     </x-code>
@@ -75,13 +75,13 @@
         @verbatim
             <c-menu class="border border-base-content/10 w-64!">
                 {{-- Default --}}
-                <c-menu-item title="Internal link" icon="arrow-down" link="/components/sidebar" />
+                <c-menu-item label="Internal link" icon="arrow-down" link="/components/sidebar" />
 
                 {{-- Notice `external` --}}
-                <c-menu-item title="External link" icon="redo" link="https://feichtinger.dev" external />
+                <c-menu-item label="External link" icon="redo" link="https://feichtinger.dev" external />
 
                 {{-- Notice `no-wire-navigate` --}}
-                <c-menu-item title="Internal without wire:navigate" icon="power" link="/components/menu"
+                <c-menu-item label="Internal without wire:navigate" icon="power" link="/components/menu"
                     no-wire-navigate />
             </c-menu>
         @endverbatim
@@ -92,18 +92,49 @@
     <x-code language="blade" render-class="flex justify-center">
         @verbatim
             <c-menu class="border border-base-content/10 w-64! gap-2">
-                <c-menu-sub title="Home" icon="home">
-                    <c-menu-item title="Users" icon="user" />
-                    <c-menu-item title="Folders" icon="folder" />
+                <c-menu-sub label="Home" icon="home">
+                    <c-menu-item label="Users" icon="user" />
+                    <c-menu-item label="Folders" icon="folder" />
                 </c-menu-sub>
 
                 <c-divider />
 
                 {{-- Force with `open` --}}
-                <c-menu-sub title="Settings" icon="settings" open>
-                    <c-menu-item title="Wifi" icon="wifi" />
-                    <c-menu-item title="Archives" icon="archive" />
+                <c-menu-sub label="Settings" icon="settings" open>
+                    <c-menu-item label="Wifi" icon="wifi" />
+                    <c-menu-item label="Archives" icon="archive" />
                 </c-menu-sub>
+            </c-menu>
+        @endverbatim
+    </x-code>
+
+    {{-- Sizes --}}
+    <x-heading title="Sizes" />
+    <x-code language="blade" render-class="flex flex-col items-center gap-4">
+        @verbatim
+            <c-menu class="border border-base-content/10 w-64! menu-xs">
+                <c-menu-item label="Extra small 1" />
+                <c-menu-item label="Extra small 2" />
+            </c-menu>
+
+            <c-menu class="border border-base-content/10 w-64! menu-sm">
+                <c-menu-item label="Small 1" />
+                <c-menu-item label="Small 2" />
+            </c-menu>
+
+            <c-menu class="border border-base-content/10 w-64! menu-md">
+                <c-menu-item label="Medium 1" />
+                <c-menu-item label="Medium 2" />
+            </c-menu>
+
+            <c-menu class="border border-base-content/10 w-64! menu-lg">
+                <c-menu-item label="Large 1" />
+                <c-menu-item label="Large 2" />
+            </c-menu>
+
+            <c-menu class="border border-base-content/10 w-64! menu-xl">
+                <c-menu-item label="Extra large 1" />
+                <c-menu-item label="Extra large 2" />
             </c-menu>
         @endverbatim
     </x-code>
@@ -113,14 +144,14 @@
     <x-code language="blade" render-class="flex justify-center">
         @verbatim
             <c-menu class="border border-base-content/10 w-64!">
-                <c-menu-item title="Users" icon="user" active />
-                <c-menu-item title="Messages" icon="mail" />
-                <c-menu-item title="Folders" icon="folder" hidden />
-                <c-menu-item title="Events" icon="zap" disabled />
+                <c-menu-item label="Users" icon="user" active />
+                <c-menu-item label="Messages" icon="mail" />
+                <c-menu-item label="Folders" icon="folder" hidden />
+                <c-menu-item label="Events" icon="zap" disabled />
 
-                <c-menu-sub title="Settings" icon="settings" disabled>
-                    <c-menu-item title="Wifi" icon="wifi" />
-                    <c-menu-item title="Archives" icon="archive" />
+                <c-menu-sub label="Settings" icon="settings" disabled>
+                    <c-menu-item label="Wifi" icon="wifi" />
+                    <c-menu-item label="Archives" icon="archive" />
                 </c-menu-sub>
             </c-menu>
         @endverbatim
@@ -164,9 +195,9 @@
             {{-- NOTE: `active-by-route` --}}
             <c-menu active-by-route class="border border-base-content/10 w-64!">
                 {{-- It is active because you are right now browsing this url --}}
-                <c-menu-item title="Active by route" link="/components/menu" />
+                <c-menu-item label="Active by route" link="/components/menu" />
 
-                <c-menu-item title="Not active" link="/components/button" />
+                <c-menu-item label="Not active" link="/components/button" />
             </c-menu>
         @endverbatim
     </x-code>
@@ -178,9 +209,9 @@
     <x-code-only language="blade">
         @verbatim
             <c-menu active-by-route>
-                <c-menu-sub title="Users">
-                    <c-menu-item title="User list" route="users.index" />
-                    <c-menu-item title="User details" route="users.update" :route-params="['user' => $userId]" />
+                <c-menu-sub label="Users">
+                    <c-menu-item label="User list" route="users.index" />
+                    <c-menu-item label="User details" route="users.update" :route-params="['user' => $userId]" />
                 </c-menu-sub>
             </c-menu>
         @endverbatim
@@ -198,28 +229,28 @@
                         icon-class="transition-transform group-hover:-rotate-10 scale-95 group-hover:scale-105" />
 
                     {{-- Items --}}
-                    <c-menu-item title="Breadcrumbs" link="/components/breadcrumbs" active-icon="dot"
+                    <c-menu-item label="Breadcrumbs" link="/components/breadcrumbs" active-icon="dot"
                         active-icon-class="h-8 w-8 lg:h-6 lg:w-6 absolute -left-3 lg:-left-2" />
 
-                    <c-menu-item title="Drawer" link="/components/drawer" active-icon="dot"
+                    <c-menu-item label="Drawer" link="/components/drawer" active-icon="dot"
                         active-icon-class="h-8 w-8 lg:h-6 lg:w-6 absolute -left-3 lg:-left-2" />
 
-                    <c-menu-item title="Dock" link="/components/dock" active-icon="dot"
+                    <c-menu-item label="Dock" link="/components/dock" active-icon="dot"
                         active-icon-class="h-8 w-8 lg:h-6 lg:w-6 absolute -left-3 lg:-left-2" />
 
-                    <c-menu-item title="Header" link="/components/header" active-icon="dot"
+                    <c-menu-item label="Header" link="/components/header" active-icon="dot"
                         active-icon-class="h-8 w-8 lg:h-6 lg:w-6 absolute -left-3 lg:-left-2" />
 
-                    <c-menu-item title="Layout" link="/components/layout" active-icon="dot"
+                    <c-menu-item label="Layout" link="/components/layout" active-icon="dot"
                         active-icon-class="h-8 w-8 lg:h-6 lg:w-6 absolute -left-3 lg:-left-2" />
 
-                    <c-menu-item title="Menu" link="/components/menu" active-icon="dot"
+                    <c-menu-item label="Menu" link="/components/menu" active-icon="dot"
                         active-icon-class="h-8 w-8 lg:h-6 lg:w-6 absolute -left-3 lg:-left-2" />
 
-                    <c-menu-item title="Sidebar" link="/components/sidebar" active-icon="dot"
+                    <c-menu-item label="Sidebar" link="/components/sidebar" active-icon="dot"
                         active-icon-class="h-8 w-8 lg:h-6 lg:w-6 absolute -left-3 lg:-left-2" />
 
-                    <c-menu-item title="Tabs" link="/components/tabs" active-icon="dot"
+                    <c-menu-item label="Tabs" link="/components/tabs" active-icon="dot"
                         active-icon-class="h-8 w-8 lg:h-6 lg:w-6 absolute -left-3 lg:-left-2" />
                 </div>
             </c-menu>
@@ -231,9 +262,9 @@
     <x-code language="blade" render-class="flex justify-center">
         @verbatim
             <c-menu class="border border-base-content/10 w-fit!" horizontal>
-                <c-menu-item title="Home" icon="home" />
-                <c-menu-item title="Messages" icon="mail" />
-                <c-menu-item title="My settings" icon="zap" />
+                <c-menu-item label="Home" icon="home" />
+                <c-menu-item label="Messages" icon="mail" />
+                <c-menu-item label="My settings" icon="zap" />
             </c-menu>
         @endverbatim
     </x-code>

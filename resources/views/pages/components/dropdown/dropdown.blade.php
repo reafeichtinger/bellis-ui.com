@@ -25,9 +25,9 @@
     <x-code language="blade">
         @verbatim
             <c-dropdown>
-                <c-menu-item title="Archive" icon="archive" />
-                <c-menu-item title="Remove" icon="trash" />
-                <c-menu-item title="Restore" icon="arrow-right" />
+                <c-menu-item label="Archive" icon="archive" />
+                <c-menu-item label="Remove" icon="trash" />
+                <c-menu-item label="Restore" icon="arrow-right" />
             </c-dropdown>
         @endverbatim
     </x-code>
@@ -42,8 +42,8 @@
                     <c-button icon="bell" class="btn-circle" />
                 </c-slot:trigger>
 
-                <c-menu-item title="Archive" />
-                <c-menu-item title="Move" />
+                <c-menu-item label="Archive" />
+                <c-menu-item label="Move" />
             </c-dropdown>
         @endverbatim
     </x-code>
@@ -53,8 +53,8 @@
     <x-code language="blade" render-class="text-end">
         @verbatim
             <c-dropdown label="Hello" class="btn-warning" end>
-                <c-menu-item title="It should align correctly on right side" />
-                <c-menu-item title="Yes!" />
+                <c-menu-item label="It should align correctly on right side" />
+                <c-menu-item label="Yes!" />
             </c-dropdown>
         @endverbatim
     </x-code>
@@ -67,18 +67,18 @@
     <x-code language="blade" render-class="flex flex-wrap justify-evenly">
         @verbatim
             <c-dropdown label="Default" no-x-anchor>
-                <c-menu-item title="Hey" />
-                <c-menu-item title="How are you?" />
+                <c-menu-item label="Hey" />
+                <c-menu-item label="How are you?" />
             </c-dropdown>
 
             <c-dropdown label="Top" no-x-anchor top>
-                <c-menu-item title="Hey" />
-                <c-menu-item title="How are you?" />
+                <c-menu-item label="Hey" />
+                <c-menu-item label="How are you?" />
             </c-dropdown>
 
             <c-dropdown label="End" no-x-anchor end>
-                <c-menu-item title="Hey" />
-                <c-menu-item title="It should align correctly on end?" />
+                <c-menu-item label="Hey" />
+                <c-menu-item label="It should align correctly on end?" />
             </c-dropdown>
         @endverbatim
     </x-code>
@@ -89,19 +89,19 @@
         @verbatim
             <c-dropdown label="Default">
                 @foreach ($this->array as $item)
-                    <c-menu-item title="Item {{ $item }}" />
+                    <c-menu-item label="Item {{ $item }}" />
                 @endforeach
             </c-dropdown>
 
             <c-dropdown label="Scroll" scroll>
                 @foreach ($this->array as $item)
-                    <c-menu-item title="Item {{ $item }}" />
+                    <c-menu-item label="Item {{ $item }}" />
                 @endforeach
             </c-dropdown>
 
             <c-dropdown label="Max height" scroll max-height="max-h-64">
                 @foreach ($this->array as $item)
-                    <c-menu-item title="Item {{ $item }}" />
+                    <c-menu-item label="Item {{ $item }}" />
                 @endforeach
             </c-dropdown>
         @endverbatim

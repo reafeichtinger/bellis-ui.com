@@ -30,10 +30,10 @@ class Mobile extends Component
                     {{-- Build sections --}}
                     @foreach ($menu as $section)
                         {{-- Actions --}}
-                        <c-menu-sub :icon="$section['icon'] ?? null" :title="$section['title'] ?? null">
+                        <c-menu-sub :icon="$section['icon'] ?? null" :label="$section['label'] ?? null">
                             {{-- Build items --}}
                             @foreach ($section['items'] as $item)
-                                <x-sidebar-item :title="$item['title'] ?? null" :link="$item['link'] ?? null" :badge="$item['badge'] ?? null" :badge-class="$item['badgeClass'] ?? null" />
+                                <x-sidebar-item :label="$item['label'] ?? null" :link="$item['link'] ?? null" :badge="$item['badge'] ?? null" :badge-class="$item['badgeClass'] ?? null" />
                             @endforeach
                         </c-menu-sub>
                     @endforeach
