@@ -88,6 +88,7 @@
                     ['label' => 'Menu', 'link' => '/components/menu'],
                     ['label' => 'Sidebar', 'link' => '/components/sidebar', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['label' => 'Tabs', 'link' => '/components/tabs'],
+                    ['label' => 'TOC (Table of contents)', 'link' => '/components/toc'],
                 ],
             ],
             'third-party' => [

@@ -16,37 +16,44 @@ class Desktop extends Component
     public function render(): View|Closure|string
     {
         return <<<'BLADE'
-            <c-main with-nav collapsible>
-                {{-- Sidebar --}}
-                <x-slot name="sidebar" drawer="main-drawer" class="bg-base-100">
-                    <c-menu active-by-route exact active-class="text-primary font-bold" class="sm:mt-6 ms-2 mb-32">
-                        <c-menu-title :title="$title" class="text-base-content/50 uppercase font-normal text-xs" />
-                        {{-- Build sections --}}
-                        @foreach ($menu as $section)
-                            <div class="group">
-                                <c-divider class="p-3" />
-                                @if ($section['icon'] ?? (null || $section['title'] ?? null))
-                                    <c-menu-title :icon="$section['icon'] ?? null" :title="$section['title'] ?? null"
-                                        class="text-base-content/50 uppercase font-normal text-xs"
-                                        icon-class="transition-transform group-hover:-rotate-10 scale-95 group-hover:scale-105" />
-                                @endif
-                                {{-- Build items --}}
-                                @foreach ($section['items'] as $item)
-                                    <x-sidebar-item :label="$item['label'] ?? null" :link="$item['link'] ?? null" :badge="$item['badge'] ?? null" :badge-class="$item['badgeClass'] ?? null" />
-                                @endforeach
-                            </div>
-                        @endforeach
-                    </c-menu>
+            <div class="flex flex-col max-w-screen-2xl mx-auto">
+                <div class="flex flex-col-reverse px-4 sm:px-8 lg:px-2 lg:grid lg:grid-cols-[16rem_minmax(0,1fr)_14rem] gap-10 xl:gap-16 w-full min-h-screen">
+                    <div class="overflow-y-scroll max-h-screen sticky top-24 pb-32">
+                        {{-- Sidebar --}}
+                        <c-menu active-by-route exact active-class="text-primary font-bold" class="hidden lg:block w-full">
+                            <c-menu-title :title="$title" class="text-base-content/50 uppercase font-normal text-xs" />
+                            {{-- Sections --}}
+                            @foreach ($menu as $section)
+                                <div class="group">
+                                    <c-divider class="p-3" />
+                                    @if ($section['icon'] ?? (null || $section['title'] ?? null))
+                                        <c-menu-title :icon="$section['icon'] ?? null" :title="$section['title'] ?? null"
+                                            class="text-base-content/50 uppercase font-normal text-xs"
+                                            icon-class="transition-transform group-hover:-rotate-10 scale-95 group-hover:scale-105" />
+                                    @endif
+                                    {{-- Items --}}
+                                    @foreach ($section['items'] as $item)
+                                        <x-sidebar-item :label="$item['label'] ?? null" :link="$item['link'] ?? null" :badge="$item['badge'] ?? null" :badge-class="$item['badgeClass'] ?? null" />
+                                    @endforeach
+                                </div>
+                            @endforeach
+                        </c-menu>
+                    </div>
                     {{-- Content --}}
-                    <x-slot name="content" class="lg:max-w-4xl" wire:transition.navigate="content">
-                        {{ $slot }}
-                        {{-- Footer --}}
-                        <x-slot name="footer">
-                            <x-footer />
-                        </x-slot>
-                    </x-slot>
-                </x-slot>
-            </c-main>
+                    <div wire:transition.navigate="content">{{ $slot }}</div>
+                    {{-- TOC --}}
+                    <div class="relative" wire:transition.navigate="toc">
+                        <div class="sticky top-24 group list-none">
+                            <c-menu-title icon="table-of-contents" title="On this page"
+                                class="text-base-content/50 uppercase font-normal text-xs -ms-4"
+                                icon-class="transition-transform group-hover:-rotate-10 scale-95 group-hover:scale-105" />
+                            <c-toc class="text-sm border-s border-base-content/25" ignore="[id^='toc-example']" />
+                        </div>
+                    </div>
+                </div>
+                {{-- Footer --}}
+                <x-footer />
+            </div>
         BLADE;
     }
 }
