@@ -86,6 +86,7 @@
                     ['label' => 'Header', 'link' => '/components/header'],
                     ['label' => 'Layouts', 'link' => '/components/layout', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['label' => 'Menu', 'link' => '/components/menu'],
+                    ['label' => 'Resizable', 'link' => '/components/resizable'],
                     ['label' => 'Sidebar', 'link' => '/components/sidebar', 'badge' => 'wip', 'badgeClass' => 'badge-info badge-soft'],
                     ['label' => 'Tabs', 'link' => '/components/tabs'],
                     ['label' => 'TOC (Table of contents)', 'link' => '/components/toc'],

@@ -85,6 +85,7 @@ Route::group(['prefix' => 'components'], function () {
     Route::livewire('/header', 'pages::components.header');
     Route::livewire('/layout', 'pages::components.layout');
     Route::livewire('/menu', 'pages::components.menu');
+    Route::livewire('/resizable', 'pages::components.resizable');
     Route::livewire('/sidebar', 'pages::components.sidebar');
     Route::livewire('/tabs', 'pages::components.tabs');
     Route::livewire('/toc', 'pages::components.toc');

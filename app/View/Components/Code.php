@@ -33,7 +33,7 @@ class Code extends Component
     {
         return <<<'BLADE'
             @php $content = $prepareSlot($slot); @endphp
-            <div x-data="{ selected: 'preview' }">
+            <div x-data="{ selected: 'preview', init() { $nextTick(() => $el.style.width = $el.clientWidth + 'px') } }">
                 <c-mockup-browser toolbar-class="border-b-(length:--border) border-b-base-content/15 mt-0">
                     <c-slot name="url" class="flex-1 flex items-center justify-end">
                         <div class="tabs tabs-lift tabs-sm -me-3 mt-1 -mb-(--border)">
