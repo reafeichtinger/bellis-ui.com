@@ -69,4 +69,64 @@
             </c-resizable>
         @endverbatim
     </x-code>
+
+    {{-- Style --}}
+    <x-heading title="Style" />
+    <x-code language="blade" render-class="flex flex-col justify-end gap-6">
+        {{-- blade-formatter-disable --}}
+        @verbatim
+            <c-resizable top end bottom start class="min-h-14 max-h-64 min-w-24 max-w-full p-4 bg-base-200"
+                {{-- Custom color + width --}}
+                top-class="group-hover:bg-accent! w-3/4!" 
+                {{-- Custom thickness and height --}}
+                end-class="w-1.5 h-6!"
+                {{-- Custom thickness + radius --}}
+                bottom-class="h-1.5 rounded-none"
+                {{-- Custom color + heigth --}}
+                start-class="group-hover:bg-info! h-3/4!">
+                This container is resizable from all sides with custom style.
+            </c-resizable>
+        @endverbatim
+        {{-- blade-formatter-enable --}}
+    </x-code>
+
+    {{-- Icon handles --}}
+    <x-heading title="Icon handles" />
+    <x-code language="blade" render-class="flex flex-col justify-end gap-6">
+        {{-- blade-formatter-disable --}}
+        @verbatim
+            <c-resizable top end bottom start 
+                class="min-h-14 max-h-64 min-w-24 max-w-full p-4 ring-(length:--border) ring-inset ring-base-content/15"
+                top-icon="grip-horizontal"
+                end-icon="grip-vertical"
+                bottom-icon="grip-horizontal"
+                start-icon="grip-vertical"
+            >
+                This container is resizable from all sides with icon handles.
+            </c-resizable>
+        @endverbatim
+        {{-- blade-formatter-enable --}}
+    </x-code>
+
+    {{-- Custom icon style --}}
+    <x-heading title="Custom icon style" />
+    <x-code language="blade" render-class="flex flex-col justify-end gap-6">
+        {{-- blade-formatter-disable --}}
+        @verbatim
+            <c-resizable top end bottom start 
+                class="min-h-14 max-h-64 min-w-24 max-w-full p-4 bg-base-200"
+                top-icon="chevron-up"
+                top-class="bg-error! text-error-content! hover:bg-error-content! hover:text-error! border-error-content!"
+                end-icon="chevron-right"
+                end-class="bg-info! text-info-content! hover:bg-info-content! hover:text-info! border-info-content!"
+                bottom-icon="chevron-down"
+                bottom-class="bg-warning! text-warning-content! hover:bg-warning-content! hover:text-warning! border-warning-content!"
+                start-icon="chevron-left"
+                start-class="bg-success! text-success-content! hover:bg-success-content! hover:text-success! border-success-content!"
+            >
+                This container is resizable from all sides with custom icon style.
+            </c-resizable>
+        @endverbatim
+        {{-- blade-formatter-enable --}}
+    </x-code>
 </div>

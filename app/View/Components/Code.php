@@ -33,15 +33,20 @@ class Code extends Component
     {
         return <<<'BLADE'
             @php $content = $prepareSlot($slot); @endphp
-            <div x-data="{ selected: 'preview', init() { $nextTick(() => $el.style.width = $el.clientWidth + 'px') } }">
+            <div x-data="{ el: $el, selected: 'preview',
+                setTab(tab) { 
+                    this.el.style.width = tab === 'code' ? this.el.clientWidth + 'px' : null;
+                    this.selected = tab;
+                } 
+            }">
                 <c-mockup-browser toolbar-class="border-b-(length:--border) border-b-base-content/15 mt-0">
                     <c-slot name="url" class="flex-1 flex items-center justify-end">
                         <div class="tabs tabs-lift tabs-sm -me-3 mt-1 -mb-(--border)">
-                            <a role="tab" x-on:click="selected = 'preview'" class="tab" x-bind:class="selected == 'preview' && 'tab-active'">
+                            <a role="tab" x-on:click="setTab('preview')" class="tab" x-bind:class="selected == 'preview' && 'tab-active'">
                                 <c-icon name="app-window-mac" class="h-4 w-4 me-1" />
                                 Preview
                             </a>
-                            <a role="tab" x-on:click="selected = 'code'" class="tab" x-bind:class="selected == 'code' && 'tab-active text-white [--tab-bg:var(--color-zinc-900)]'">
+                            <a role="tab" x-on:click="setTab('code')" class="tab" x-bind:class="selected == 'code' && 'tab-active text-white [--tab-bg:var(--color-zinc-900)]'">
                                 <c-icon name="code-xml" class="h-4 w-4 me-1" />
                                 HTML
                             </a>

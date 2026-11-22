@@ -42,11 +42,13 @@ class Desktop extends Component
                     {{-- Content --}}
                     <div wire:transition.navigate="content" class="flex-1">{{ $slot }}</div>
                     {{-- TOC --}}
-                    <c-resizable start class="relative min-w-32 w-56 max-w-96 ps-4" wire:transition.navigate="toc" content-class="sticky top-24 group list-none">
-                        <c-menu-title icon="table-of-contents" title="On this page"
-                            class="text-base-content/50 uppercase font-normal text-xs -ms-4"
-                            icon-class="transition-transform group-hover:-rotate-10 scale-95 group-hover:scale-105" />
-                        <c-toc class="text-sm border-s border-base-content/25" ignore="[id^='toc-example']" />
+                    <c-resizable start class="min-w-32 w-56 max-w-96 ps-4" wire:transition.navigate="toc" content-class="relative">
+                        <div class="sticky top-24 group list-none">
+                            <c-menu-title icon="table-of-contents" title="On this page"
+                                class="text-base-content/50 uppercase font-normal text-xs -ms-4"
+                                icon-class="transition-transform group-hover:-rotate-10 scale-95 group-hover:scale-105" />
+                            <c-toc class="text-sm border-s border-base-content/25" ignore="[id^='toc-example']" />
+                        </div>
                     </c-resizable>
                 </div>
                 {{-- Footer --}}
