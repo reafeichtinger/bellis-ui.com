@@ -129,4 +129,32 @@
         @endverbatim
         {{-- blade-formatter-enable --}}
     </x-code>
+
+    {{-- Resized event --}}
+    <x-heading title="Resized event" />
+    <x-code language="blade" render-class="flex flex-col justify-end gap-6">
+        @verbatim
+            <c-resizable top end bottom start id="resize-event-test"
+                class="min-h-14 max-h-64 min-w-24 max-w-full p-4 bg-base-200">
+                We are listening to this resizables 'rezisable-updated' event.
+            </c-resizable>
+        @endverbatim
+    </x-code>
+    <x-code-only language="php">
+        {{-- blade-formatter-disable --}}
+        @verbatim
+            #[On('rezisable-updated')]
+            public function onResizableUpdated(
+                ?string $id = null, ?string $width = null, ?string $height = null
+            ): void
+            {
+                if ($id === 'resize-event-test') {
+                    $this->success(
+                        "'$id' was resized to width '$width', height '$height'"
+                    );
+                }
+            }
+        @endverbatim
+        {{-- blade-formatter-enable --}}
+    </x-code-only>
 </div>
