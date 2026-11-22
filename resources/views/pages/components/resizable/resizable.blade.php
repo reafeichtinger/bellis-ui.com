@@ -10,8 +10,8 @@
 
     <x-component-api :class-name="Bellis\View\Components\Bellis\Resizable::class" />
 
-    {{-- Not resizable --}}
-    <x-heading title="Not resizable" />
+    {{-- Not resizable by default --}}
+    <x-heading title="Not resizable by default" />
     <x-code language="blade" render-class="flex flex-col gap-6">
         @verbatim
             <c-resizable class="p-4 bg-base-200">
@@ -60,8 +60,8 @@
         @endverbatim
     </x-code>
 
-    {{-- Resizable all sides --}}
-    <x-heading title="Resizable all sides" />
+    {{-- Resizable on all sides --}}
+    <x-heading title="Resizable on all sides" />
     <x-code language="blade" render-class="flex flex-col justify-end gap-6">
         @verbatim
             <c-resizable top end bottom start class="min-h-14 max-h-64 min-w-24 max-w-full p-4 bg-base-200">
@@ -70,8 +70,8 @@
         @endverbatim
     </x-code>
 
-    {{-- Style --}}
-    <x-heading title="Style" />
+    {{-- Custom border style --}}
+    <x-heading title="Custom border style" />
     <x-code language="blade" render-class="flex flex-col justify-end gap-6">
         {{-- blade-formatter-disable --}}
         @verbatim
@@ -90,8 +90,8 @@
         {{-- blade-formatter-enable --}}
     </x-code>
 
-    {{-- Icon handles --}}
-    <x-heading title="Icon handles" />
+    {{-- Using icon handles --}}
+    <x-heading title="Using icon handles" />
     <x-code language="blade" render-class="flex flex-col justify-end gap-6">
         {{-- blade-formatter-disable --}}
         @verbatim
@@ -108,8 +108,8 @@
         {{-- blade-formatter-enable --}}
     </x-code>
 
-    {{-- Custom icon style --}}
-    <x-heading title="Custom icon style" />
+    {{-- Customizing icon handles --}}
+    <x-heading title="Customizing icon handles" />
     <x-code language="blade" render-class="flex flex-col justify-end gap-6">
         {{-- blade-formatter-disable --}}
         @verbatim
@@ -130,10 +130,12 @@
         {{-- blade-formatter-enable --}}
     </x-code>
 
-    {{-- Resized event --}}
-    <x-heading title="Resized event" />
+    {{-- Listening to the `rezisable-updated` event --}}
+    <x-heading title="Listening to the `rezisable-updated` event"
+        subtitle="A general event is dispatched when the size of any resizable changes. The event will provide the id, widht and height properties. If you want to listen to a specific resizable instance it is a good idea to give it an id." />
     <x-code language="blade" render-class="flex flex-col justify-end gap-6">
         @verbatim
+            {{-- NOTE: `id` --}}
             <c-resizable top end bottom start id="resize-event-test"
                 class="min-h-14 max-h-64 min-w-24 max-w-full p-4 bg-base-200">
                 We are listening to this resizables 'rezisable-updated' event.
@@ -157,4 +159,28 @@
         @endverbatim
         {{-- blade-formatter-enable --}}
     </x-code-only>
+
+    {{-- Persisting the size via localStorage --}}
+    <x-heading title="Persisting the size via localStorage">
+        <x-slot:subtitle>
+            <p>
+                If you want to persist the size of the resizable to survive fresh page loads you can save its size in
+                <code class="text-xs">localStorage</code>.
+                For this all you need to do is adding the
+                <code class="text-xs">persist</code>
+                flag to the component.</br>
+                You can reset the width and height by double clicking the resize handle or by clearing your local
+                storage.
+            </p>
+        </x-slot:subtitle>
+    </x-heading>
+    <x-code language="blade" render-class="flex flex-col justify-end gap-6">
+        @verbatim
+            {{-- NOTE: `persist` --}}
+            <c-resizable top end bottom start persist id="resize-persist-test"
+                class="min-h-14 max-h-64 min-w-24 max-w-full p-4 bg-base-200">
+                This resizable remembers its size via localStorage.
+            </c-resizable>
+        @endverbatim
+    </x-code>
 </div>
